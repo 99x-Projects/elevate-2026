@@ -1,0 +1,638 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ELEVATE 2026 — Judging & Event Pack</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#0D0C24;color:#F0EEE9;font-family:"Avenir Next","Segoe UI","Helvetica Neue",system-ui,sans-serif;line-height:1.55}
+  a{color:#E38E65}
+  .wrap{max-width:1840px;margin:0 auto;padding:0 clamp(16px,2vw,40px)}
+  header{padding:44px 0 0;border-bottom:2px solid #2E2B4B}
+  .head-row{display:flex;align-items:flex-start;justify-content:space-between;gap:44px}
+  .head-text{min-width:0}
+  .logo{width:min(280px,26vw);display:block;flex:none;margin-top:14px;opacity:.94}
+  @media(max-width:820px){.head-row{flex-direction:column-reverse;gap:18px}.logo{width:min(240px,58vw);margin-top:0}}
+  .kicker{color:#E38E65;font-size:14px;font-weight:700;letter-spacing:.3em;text-transform:uppercase}
+  .kicker::before{content:"✦ ";letter-spacing:0}
+  h1{font-size:clamp(34px,6vw,58px);font-weight:800;letter-spacing:-.01em;margin-top:12px}
+  h1 .em{color:#E38E65}
+  .sub{color:#B3AFC8;font-size:19px;margin-top:10px;max-width:1100px}
+  .tabgroups{display:flex;gap:40px;flex-wrap:wrap;margin-top:30px;align-items:flex-end}
+  .tglab{font-size:11px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;margin:0 0 8px 6px}
+  .tglab.pub{color:#E38E65}
+  .tglab.org{color:#8AA9E5}
+  .tabs{display:flex;gap:6px;flex-wrap:wrap}
+  .tabs.orgt a:hover{color:#8AA9E5}
+  .tabs.orgt a.on{color:#8AA9E5;border-color:#2E2B4B;background:#1A1738}
+  .tabs a{font-size:15.5px;font-weight:800;text-decoration:none;color:#B3AFC8;padding:12px 26px;border-radius:12px 12px 0 0;
+          border:2px solid transparent;border-bottom:none}
+  .tabs a:hover{color:#E38E65}
+  .tabs a.on{color:#E38E65;border-color:#2E2B4B;background:#1A1738}
+  section{padding:52px 0 8px}
+  h2{font-size:28px;font-weight:800}
+  h2 .n{display:inline-flex;width:36px;height:36px;border-radius:50%;background:#E38E65;color:#0D0C24;font-size:17px;
+        align-items:center;justify-content:center;margin-right:12px;vertical-align:4px}
+  .lead{color:#B3AFC8;font-size:16.5px;margin:10px 0 4px;max-width:1150px}
+  .lead b{color:#F0EEE9}
+  figure{margin:26px 0 40px}
+  figure img{width:100%;height:auto;border:2px solid #3A3656;border-radius:14px;display:block}
+  figure a:hover img{border-color:#E38E65}
+  figcaption{font-size:14px;color:#938FB0;margin-top:10px}
+  figcaption b{color:#D9D6CF}
+  .chips{display:inline-flex;gap:8px;flex-wrap:wrap;vertical-align:middle}
+  .chip{font-size:13.5px;font-weight:700;padding:4px 13px;border-radius:999px;border:2px solid}
+  .c1{color:#A9CB7F;border-color:#A9CB7F}.c2{color:#83C5BC;border-color:#83C5BC}.c3{color:#EFC569;border-color:#EFC569}
+  .c5{color:#8AA9E5;border-color:#8AA9E5}
+  .note{border:2px solid #3A3656;border-radius:12px;padding:16px 22px;margin:26px 0;font-size:15.5px;color:#D9D6CF}
+  .note b{color:#F0EEE9}
+  footer{margin-top:56px;padding:30px 0 44px;border-top:2px solid #2E2B4B;color:#938FB0;font-size:14px}
+  footer a{color:#E38E65}
+
+  /* calendar */
+  .cal{position:relative;margin:34px 0 20px;padding-left:34px;max-width:1100px}
+  .cal::before{content:"";position:absolute;left:9px;top:8px;bottom:8px;width:3px;background:#2E2B4B;border-radius:2px}
+  .mile{position:relative;padding:0 0 34px}
+  .mile::before{content:"";position:absolute;left:-32px;top:6px;width:17px;height:17px;border-radius:50%;
+                background:#0D0C24;border:4px solid #E38E65}
+  .mile.done::before{background:#E38E65}
+  .mile.big::before{border-color:#F0EEE9;background:#E38E65;box-shadow:0 0 0 4px #3A3656}
+  .mile .date{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:14px;font-weight:800;letter-spacing:.08em;
+              color:#E38E65;text-transform:uppercase}
+  .mile .date .done-tag{color:#A9CB7F;margin-left:10px;letter-spacing:.02em}
+  .mile h3{font-size:21px;font-weight:800;margin-top:2px}
+  .mile p{color:#B3AFC8;font-size:15.5px;margin-top:4px;max-width:900px}
+  .mile p b{color:#F0EEE9}
+  .mile.big{border:2px solid #E38E65;border-radius:14px;padding:18px 24px 20px;background:#1A1738;margin-left:-8px}
+  .mile.big::before{left:-40px}
+
+  /* calendar - the three dates */
+  .bigcal{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;margin:30px 0 10px}
+  .bc{border:2px solid #2E2B4B;border-radius:16px;padding:26px 30px;background:#1A1738;display:flex;flex-direction:column}
+  .bc .date{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:15px;font-weight:800;letter-spacing:.08em;
+       color:#E38E65;text-transform:uppercase}
+  .bc h3{font-size:22px;font-weight:800;margin-top:6px}
+  .bc p{color:#B3AFC8;font-size:15px;margin-top:8px;flex:1}
+  .bc p b{color:#F0EEE9}
+  .bc .where{margin-top:16px;font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#938FB0}
+  .bc.hero{border-color:#E38E65;border-width:2.5px}
+  .bc.hero .where{color:#E38E65}
+
+  /* sessions */
+  .sess{display:grid;grid-template-columns:1.15fr 1fr;gap:34px;align-items:start;margin:30px 0 46px;
+        border:2px solid #2E2B4B;border-radius:16px;padding:28px 30px}
+  @media(max-width:980px){.sess{grid-template-columns:1fr}}
+  .sess h3{font-size:24px;font-weight:800}
+  .sess .when{display:inline-block;margin-top:8px;font-size:13.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;
+              color:#E38E65;border:2px solid #E38E65;border-radius:999px;padding:5px 14px}
+  .sess ul{margin:16px 0 0 18px;color:#D9D6CF;font-size:15.5px}
+  .sess li{margin:7px 0}
+  .sess li b{color:#F0EEE9}
+  .sess figure{margin:0}
+  .sess figure img{border-radius:12px}
+
+  /* team composition */
+  .draftchip{display:inline-block;font-size:13px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;
+      color:#EFC569;border:2px solid #EFC569;border-radius:999px;padding:5px 16px;margin-left:14px;vertical-align:6px}
+  table.tc{border-collapse:collapse;width:100%;max-width:1100px;margin:20px 0;font-size:15px}
+  table.tc th{background:#3A3656;color:#F0EEE9;text-align:left;padding:10px 16px;font-size:12.5px;
+      font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+  table.tc td{border-bottom:1.5px solid #2E2B4B;padding:10px 16px;color:#D9D6CF}
+  table.tc td b{color:#F0EEE9}
+  table.tc td.r{text-align:right;font-weight:700;color:#F0EEE9}
+  .teamlist{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0;max-width:1150px}
+  .tchip{font-size:14px;font-weight:700;padding:7px 16px;border-radius:999px;border:2px solid #3A3656;color:#D9D6CF}
+  .tchip.ai{border-color:#E38E65;color:#E38E65}
+  .stat{display:flex;gap:18px;flex-wrap:wrap;margin:26px 0}
+  .stat .s{border:2px solid #3A3656;border-radius:14px;padding:16px 26px;min-width:170px}
+  .stat .s .v{font-size:34px;font-weight:800;color:#E38E65}
+  .stat .s .l{font-size:13.5px;color:#B3AFC8;margin-top:2px}
+
+  /* team guide */
+  .bigline{border:2.5px solid #E38E65;background:#1A1738;border-radius:14px;padding:22px 28px;margin:28px 0;
+      font-size:clamp(19px,2.6vw,26px);font-weight:800;letter-spacing:-.01em;max-width:1100px}
+  .bigline .em{color:#E38E65}
+  .menu{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;margin:28px 0 10px}
+  .pcard{border:2.5px solid;border-radius:14px;padding:20px 22px;display:flex;flex-direction:column}
+  .pcard h3{font-size:19px;font-weight:800;color:#F0EEE9}
+  .pcard .fam{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-top:4px}
+  .pcard ul{margin:12px 0 0 16px;font-size:14.5px;color:#D9D6CF;flex:1}
+  .pcard li{margin:7px 0}
+  .pcard li b{color:#F0EEE9}
+  .pcard .dir{font-weight:800}
+  .pcard .tip{margin-top:14px;font-size:13.5px;color:#938FB0;border-top:1.5px solid #2E2B4B;padding-top:10px}
+  .pcard .tip b{color:#D9D6CF}
+  .pg1{border-color:#A9CB7F}.pg1 .fam,.pg1 .dir{color:#A9CB7F}
+  .pg2{border-color:#83C5BC}.pg2 .fam,.pg2 .dir{color:#83C5BC}
+  .pg3{border-color:#EFC569}.pg3 .fam,.pg3 .dir{color:#EFC569}
+  .pg5{border-color:#8AA9E5}.pg5 .fam,.pg5 .dir{color:#8AA9E5}
+  .refs{margin:18px 0 0;max-width:1100px;font-size:15px;color:#D9D6CF}
+  .refs li{margin:9px 0 9px 18px}
+  .refs li b{color:#F0EEE9}
+
+  /* judging tab mini-graphics */
+  .flowstrip{display:flex;flex-wrap:wrap;gap:10px;align-items:stretch;margin:26px 0 8px}
+  .fs{border:2px solid #2E2B4B;border-radius:12px;padding:12px 16px;background:#1A1738;flex:1;min-width:158px}
+  .fs .t{font-size:11.5px;font-weight:800;letter-spacing:.1em;color:#E38E65;text-transform:uppercase}
+  .fs h4{font-size:15px;font-weight:800;color:#F0EEE9;margin-top:2px}
+  .fs p{font-size:12.5px;color:#938FB0;margin-top:4px}
+  .fa{align-self:center;color:#E38E65;font-weight:800;font-size:19px;flex:none}
+  @media(max-width:760px){.fa{display:none}}
+  .funnel{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:22px 0 8px}
+  .fu{border:2px solid #2E2B4B;border-radius:999px;padding:8px 18px;font-size:14px;font-weight:700;color:#D9D6CF}
+  .fu b{color:#F0EEE9}
+  .fu.hot{background:#E38E65;border-color:#E38E65;color:#0D0C24}
+  .fu.hot b{color:#0D0C24}
+
+  /* how to elevate (team guide education block) */
+  .flow{display:grid;grid-template-columns:repeat(auto-fit,minmax(225px,1fr));gap:18px;margin:26px 0 8px}
+  .fstep{border:2px solid #2E2B4B;border-radius:14px;padding:18px 20px;background:#1A1738}
+  .fstep .fn{font-size:30px;font-weight:800;color:#E38E65;line-height:1}
+  .fstep h3{font-size:17.5px;font-weight:800;margin-top:8px}
+  .fstep p{font-size:14px;color:#B3AFC8;margin-top:6px}
+  .fstep p b{color:#D9D6CF}
+  .pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:22px;margin:28px 0 8px}
+  .plc{border:2.5px solid;border-radius:16px;padding:24px 28px;background:#1A1738}
+  .plc h3{font-size:24px;font-weight:800}
+  .plc .nsl{font-size:17px;font-weight:700;font-style:italic;color:#F0EEE9;margin-top:6px}
+  .plc .pp{font-size:14.5px;color:#B3AFC8;margin-top:12px;line-height:1.55}
+  .plc .pp b{color:#D9D6CF}
+  .plc .mlink{margin-top:12px;font-size:13.5px;font-weight:700}
+  .pl1{border-color:#A9CB7F}.pl1 h3{color:#A9CB7F}.pl1 .mlink a{color:#A9CB7F}
+  .pl2{border-color:#83C5BC}.pl2 h3{color:#83C5BC}.pl2 .mlink a{color:#83C5BC}
+  .pl3{border-color:#EFC569}.pl3 h3{color:#EFC569}.pl3 .mlink a{color:#EFC569}
+  .pl5{border-color:#8AA9E5}.pl5 h3{color:#8AA9E5}.pl5 .mlink a{color:#8AA9E5}
+  .stages{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:16px;margin:24px 0 8px}
+  .stage{border:2px solid #2E2B4B;border-radius:12px;padding:14px 18px}
+  .stage h4{font-size:15px;font-weight:800;color:#F0EEE9}
+  .stage h4 .ar{color:#E38E65}
+  .stage ul{margin:10px 0 0 16px;font-size:14px;color:#B3AFC8}
+  .stage li{margin:5px 0}
+
+  /* marketing */
+  .mkt{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px;margin:30px 0 10px}
+  .mcard{border:2px solid #2E2B4B;border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+  .mcard .img{background:#E5E9F0;padding:18px;display:flex;align-items:center;justify-content:center}
+  .mcard .img.dark{background:#181226}
+  .mcard img{max-width:100%;height:auto;display:block}
+  .mcard .cap{padding:14px 18px;font-size:14px;color:#B3AFC8;border-top:2px solid #2E2B4B}
+  .mcard .cap b{color:#F0EEE9;display:block;font-size:15px}
+  .mcard .cap a{font-weight:700}
+</style></head><body>
+
+<header><div class="wrap">
+  <div class="head-row">
+    <div class="head-text">
+      <div class="kicker">99x agentic hackathon · Fri 7 Aug · 5–9 PM · 99x, 349 Colombo Main Rd, Colombo 00300</div>
+      <h1>Score the elevation, <span class="em">not the agent</span>.</h1>
+      <p class="sub">Everything for the night of 7 August — the format, the scorecard, your metric,
+         and the runway sessions.</p>
+    </div>
+    <img class="logo" src="assets/logo-header-deck.png" alt="ELEVATE 2026">
+  </div>
+  <div class="tabs" style="margin-top:30px">
+    <a href="#calendar" data-tab="calendar" class="on">Event Calendar</a>
+    <a href="#guide" data-tab="guide">Team Guide</a>
+    <a href="#pack" data-tab="pack">Evaluation</a>
+    <a href="#sessions" data-tab="sessions">Sessions</a>
+    <a href="#composition" data-tab="composition">Teams</a>
+  </div>
+</div></header>
+
+<div class="wrap">
+
+<!-- ========== TAB 1 · JUDGING & FORMAT ========== -->
+<div class="tab" id="tab-pack">
+
+<section id="judges">
+  <h2><span class="n">1</span>How the evening flows</h2>
+  <div class="flowstrip">
+    <div class="fs"><div class="t">5:00</div><h4>Brief &amp; calibrate</h4>
+      <p>Rubric walkthrough · pair up · take your route</p></div>
+    <div class="fa">→</div>
+    <div class="fs"><div class="t">5:15 – 7:00</div><h4>Mentor laps</h4>
+      <p>No scores — help teams sharpen the pain &amp; the proof</p></div>
+    <div class="fa">→</div>
+    <div class="fs"><div class="t">7:00 – 8:00</div><h4>Scoring lap</h4>
+      <p>Your route: ~6 tables × ~10 min, six steps in order</p></div>
+    <div class="fa">→</div>
+    <div class="fs"><div class="t">~7:45</div><h4>Shortlist &amp; deliberate</h4>
+      <p>Each pair picks 2 → panel of ten settles the 8 over dinner</p></div>
+    <div class="fa">→</div>
+    <div class="fs"><div class="t">8:15</div><h4>Announce &amp; share</h4>
+      <p>Judges' Pick 8 — and 2–3 written notes to every team</p></div>
+  </div>
+  <p class="lead">Judging starts at the pain: is it real, is it mapped to the right pillar, did that
+     pillar move?</p>
+</section>
+
+<section id="scorecards">
+  <h2><span class="n">2</span>Scoring — six steps, in order</h2>
+  <p class="lead">One score per visit, <b>six steps in the order they're judged</b> — 0–5 each, out
+     of 30. The offering step asks the value questions right at the table: a named Monday-morning
+     user, the workflow it lands in, unit economics, the honest gap list.</p>
+  <div class="funnel">
+    <span class="fu"><b>25+ teams</b> on the floor</span><span class="fa">→</span>
+    <span class="fu">each pair shortlists <b>2</b></span><span class="fa">→</span>
+    <span class="fu"><b>10</b> candidates at dinner</span><span class="fa">→</span>
+    <span class="fu hot"><b>Judges' Pick 8</b></span>
+  </div>
+  <p class="lead">Rank within your route, never across — the panel's dinner deliberation is where
+     routes reconcile. Ties break on the gate.</p>
+  <figure><a href="assets/floor-scorecard.png"><img src="assets/floor-scorecard.png" alt="Floor scorecard — six steps, /30"></a>
+  <figcaption><b>The floor scorecard</b> — what each judge carries on the lap. A4 landscape, one per team per judge.</figcaption></figure>
+  <div class="note"><b>The qualifying bar:</b> genuinely agentic (a prompt chain is not an agent) ·
+     ran on the real project (rough is fine, mock is not) · pillar declared (scored there only).</div>
+</section>
+
+
+
+</div>
+
+<!-- ========== TAB 2 · TEAM GUIDE ========== -->
+<div class="tab" id="tab-guide" hidden>
+
+<section id="elevatepath">
+  <h2><span class="n">🧭</span>"So what do I actually do to ELEVATE?"</h2>
+  <p class="lead">Four moves, in order. You can't pick a solution before you know where you stand
+     and which pillar you're aiming at.</p>
+
+  <div class="flow">
+    <div class="fstep"><div class="fn">1</div><h3>Find your level</h3>
+      <p>Locate your team on the <b>5 waves of AI tooling</b> below. Be honest — most of us work at
+         waves 1–3 today.</p></div>
+    <div class="fstep"><div class="fn">2</div><h3>Find your surface</h3>
+      <p>Walk your project's lifecycle, find the pain that costs the most, and declare the <b>1–2
+         NorthStar pillars</b> it lives under.</p></div>
+    <div class="fstep"><div class="fn">3</div><h3>Pick your agent play</h3>
+      <p>Give an agent <b>one recurring job on your project</b> — end-to-end, with a
+         <b>human decision gate</b> in front of production.</p></div>
+    <div class="fstep"><div class="fn">4</div><h3>Run the metric</h3>
+      <p>Baseline in week one, drive in week two, bring <b>both numbers</b> to the table — the rest
+         of <a href="#onemetric">this tab</a> is exactly that.</p></div>
+  </div>
+
+  <h2 style="margin-top:44px"><span class="n">1</span>Find your level — the 5 waves of AI tooling</h2>
+  <p class="lead">We've moved from copy/paste prompts to open enterprise platforms in five short
+     years. Waves 1–3 made <b>one developer</b> faster — and the promise of a fully automated SDLC
+     broke. The real elevation is waves 4–5: <b>lifecycle automation by a hybrid team</b>. Build
+     <b>one level up from where you work today</b>: a wave-4 build — an agent that owns a lifecycle
+     stage, with a human at the gate.</p>
+  <figure><a href="assets/backdrop-waves.jpg"><img src="assets/backdrop-waves.jpg" alt="The 5 waves of AI tooling — build one level up, the project calls the agent"></a>
+  <figcaption><b>The ladder.</b> Waves 1–3 made one developer faster; the real shift starts at wave 4 —
+  the project calls the agent, and you hold the gate.</figcaption></figure>
+
+  <h2 style="margin-top:44px"><span class="n">2</span>Find your surface — the four NorthStar pillars</h2>
+  <p class="lead">The NorthStar: <b>"Incorporate AI into the software development lifecycle in a way
+     that elevates project performance."</b> Your project's biggest pain lives under one of these
+     four pillars. Declare 1–2 on your name plate — you're scored there, and only there:</p>
+  <div class="pillars">
+    <div class="plc pl1"><h3>Higher Pace</h3><div class="nsl">"Ship faster, every bolt."</div>
+      <div class="pp"><b>Sounds like:</b> releases take days · reviews queue for hours ·
+         hand-offs stall between teams · the slow task everyone routes around.</div>
+      <div class="mlink"><a href="#menu">→ metrics for this pillar</a></div></div>
+    <div class="plc pl2"><h3>Better Quality</h3><div class="nsl">"An outcome of AI-elevated practices."</div>
+      <div class="pp"><b>Sounds like:</b> rework eats the sprint · defects escape to production ·
+         flaky tests nobody trusts · the same bug class returns every month.</div>
+      <div class="mlink"><a href="#menu">→ metrics for this pillar</a></div></div>
+    <div class="plc pl3"><h3>Extended Value</h3><div class="nsl">"New upside that AI-DLC unlocks."</div>
+      <div class="pp"><b>Sounds like:</b> toil the customer pays for · tickets resolve in days, not
+         minutes · a capability the project could never staff — until an agent could own it.</div>
+      <div class="mlink"><a href="#menu">→ metrics for this pillar</a></div></div>
+    <div class="plc pl5"><h3>A Team That Thrives</h3><div class="nsl">"An enjoyable journey for everyone."</div>
+      <div class="pp"><b>Sounds like:</b> interrupt load kills flow · on-call fatigue · repetitive
+         chores nobody should own · the work that makes good people tired.</div>
+      <div class="mlink"><a href="#menu">→ metrics for this pillar</a></div></div>
+  </div>
+  <div class="note"><b>How to find the pain:</b> walk your project stage by stage — discovery ·
+     construction · operation · adoption — and ask <i>"what recurs, what does it cost, who feels
+     it?"</i> The pain you pick is scorecard step 1, and the pillar it maps to is step 2 — judges
+     score the mapping before they ever look at your agent.</div>
+
+  <p class="lead" style="margin-top:26px"><b>Move 4 — run the metric</b> — is the rest of this tab:
+     one metric, baselined before the agent, driven in week two. Keep reading. ↓</p>
+</section>
+
+<section id="onemetric">
+  <h2><span class="n">🎯</span>One team, one metric</h2>
+  <p class="lead">The judges score the <b>elevation, not the agent</b> — and an elevation is a number
+     that moved. A number can only move against a <b>baseline taken before the agent touched
+     anything</b>. That's what the two weeks between ramp-up and event day are for: they are your
+     <b>measurement window</b>, not just build time.</p>
+  <div class="bigline">Pick <span class="em">one metric</span>. Baseline it in week one.
+     Drive it in week two. Bring <span class="em">both numbers</span> to your table.</div>
+  <p class="lead">Your metric belongs to the pillar you declared
+     <span class="chips"><span class="chip c1">Higher Pace</span><span class="chip c2">Better Quality</span><span class="chip c3">Extended Value</span><span class="chip c5">A Team That Thrives</span></span>
+     — the menu below gives you proven, modern metric families for each. DORA is the backbone, but
+     anything honestly measurable counts: DX Core 4, SPACE, DevEx, customer KPIs, AI-resolution
+     metrics — sources at the <a href="#refs">end of this tab</a>.</p>
+</section>
+
+
+
+<section id="menu">
+  <h2><span class="n">📐</span>The metric menu — grouped to the NorthStar</h2>
+  <p class="lead">One <b>driver metric</b> per team, from your declared pillar's column. Arrows show
+     the direction that counts: <b>↓ drive it down</b>, <b>↑ drive it up</b>.</p>
+
+  <div class="menu">
+    <div class="pcard pg1">
+      <h3>Higher Pace</h3>
+      <div class="fam">DORA throughput · DX Core 4 speed</div>
+      <ul>
+        <li><b>Lead time for a real task</b> <span class="dir">↓</span> — time it before vs. with the agent, 3–6 real runs</li>
+        <li><b>Task cycle time</b> (idea → in production) <span class="dir">↓</span></li>
+        <li><b>Deployment frequency</b> <span class="dir">↑</span></li>
+        <li><b>Review / hand-off wait time</b> <span class="dir">↓</span></li>
+        <li><b>Perceived rate of delivery</b> <span class="dir">↑</span> (DX Core 4 pulse)</li>
+      </ul>
+      <div class="tip"><b>Two-week trick:</b> don't wait for org-level stats — stopwatch the actual
+        slow task this week, then again with the agent next week.</div>
+    </div>
+    <div class="pcard pg2">
+      <h3>Better Quality</h3>
+      <div class="fam">DORA stability · rework thinking</div>
+      <ul>
+        <li><b>Rework rate</b> <span class="dir">↓</span> — DORA's newest key metric</li>
+        <li><b>Change failure rate</b> <span class="dir">↓</span></li>
+        <li><b>Defects caught at the gate</b> <span class="dir">↑</span> / escaped defects <span class="dir">↓</span></li>
+        <li><b>Failed-deployment recovery time</b> <span class="dir">↓</span></li>
+        <li><b>Flaky-test rate</b> <span class="dir">↓</span></li>
+      </ul>
+      <div class="tip"><b>Two-week trick:</b> a monthly CFR won't move in ten days — count events
+        instead: <i>"the gate caught 9 of 11 defects before merge."</i></div>
+    </div>
+    <div class="pcard pg3">
+      <h3>Extended Value</h3>
+      <div class="fam">Customer KPIs · product (HEART) · AI resolution</div>
+      <ul>
+        <li><b>The KPI your customer already tracks</b> <span class="dir">↑</span></li>
+        <li><b>Ticket first-response / resolution time</b> <span class="dir">↓</span></li>
+        <li><b>Resolution rate</b> <span class="dir">↑</span> — share handled end-to-end by the agent, human at the gate</li>
+        <li><b>% effort moved from toil to billable work</b> <span class="dir">↑</span></li>
+        <li><b>Cost per run / per transaction</b> <span class="dir">↓</span></li>
+      </ul>
+      <div class="tip"><b>Two-week trick:</b> pick the number the customer would put on their own
+        dashboard — that's the one that survives the judges' Q&amp;A.</div>
+    </div>
+    <div class="pcard pg5">
+      <h3>A Team That Thrives</h3>
+      <div class="fam">SPACE · DevEx · DX Core 4 effectiveness</div>
+      <ul>
+        <li><b>Time reclaimed from toil</b>, per person per week <span class="dir">↑</span></li>
+        <li><b>3-question team pulse</b> (mini-DXI: friction · flow · cognitive load) <span class="dir">↑</span></li>
+        <li><b>Interrupt &amp; on-call load</b> <span class="dir">↓</span></li>
+        <li><b>"Would you keep it on Monday?"</b> <span class="dir">↑</span></li>
+      </ul>
+      <div class="tip"><b>Two-week trick:</b> run the same 3 questions with the same people in week
+        one and on 6 Aug — change either and the delta means nothing.</div>
+    </div>
+  </div>
+
+  <div class="note"><b>Driver + guardrail.</b> DORA 2025's headline: AI lifts throughput but hurts
+     stability — teams shipping ~20% more saw change failures rise ~30%. So declare <b>one driver
+     metric you move</b> and <b>one guardrail you promise not to break</b>: Higher Pace teams guard quality,
+     Better Quality teams guard pace, Extended Value and A-Team-That-Thrives teams guard both. Judges love a team that knows
+     what it's <i>not</i> allowed to sacrifice.</div>
+
+  <div class="note"><b>What a good metric looks like:</b> measurable in ≤2 weeks at task scale ·
+     lives on the real project, not a mock · your agent plausibly moves it · baseline taken
+     <b>before</b> the agent · direction declared. <b>Not metrics:</b> tokens spent, prompts written,
+     number of agents, lines of code generated — that's the machinery, and the machinery is never
+     the score.</div>
+</section>
+
+<section id="proofladder">
+  <h2><span class="n">📊</span>No customer deployment? Projected is fine — no metric is not</h2>
+  <p class="lead">Two weeks is short. Some teams won't get the agent in front of a customer by 7 Aug
+     — <b>that costs you nothing if your metric thinking is complete</b>. The floor scorecard's
+     universal scale is <i>claim → demonstration → measurement</i>; here's how your proof lands on it:</p>
+  <table class="tc">
+    <tr><th>Proof level</th><th>What it looks like at the table</th><th>Where it lands</th></tr>
+    <tr><td><b>Measured</b></td><td>Baseline + after-number, same method, on the real project.
+        <i>"Release task: 4.5 h manual → 40 min with the agent, timed over 6 runs."</i></td>
+        <td class="r">top of the scale</td></tr>
+    <tr><td><b>Projected</b></td><td>Honest baseline + a working pilot shown live + the projection
+        math. <i>"First-response baseline 4.1 h; the agent drafts in 6 min — projected ~70% cut,
+        here's the pilot."</i></td>
+        <td class="r">demonstration — strong</td></tr>
+    <tr><td><b>Claimed</b></td><td>No baseline, no number, adjectives only.
+        <i>"It makes us much faster."</i></td>
+        <td class="r">where teams lose</td></tr>
+  </table>
+  <p class="lead">The rule in one line: <b>the metric and the baseline are mandatory; the
+     after-number may be measured or projected — but a projection without a shown pilot and visible
+     math is just a claim wearing a suit.</b></p>
+</section>
+
+<section id="attable">
+  <h2><span class="n">🪧</span>At your table on the night</h2>
+  <p class="lead">The name plate carries your declared pillars — put the <b>metric, direction and
+     baseline</b> right under them. Have ready: the <b>before</b> number · the <b>after or projected</b>
+     number · <b>one sentence on the method</b> · at most <b>one chart</b>. When a judge says
+     <i>"run it now,"</i> the metric story should take 30 seconds and the demo the rest.</p>
+</section>
+
+<section id="refs">
+  <h2><span class="n">📚</span>Where the metrics come from</h2>
+  <p class="lead">Every family on the menu traces to a published framework — the same evidence base
+     as the <a href="https://github.com/asitha-w/ELEVATE2026/blob/main/rubric/version-01/research-grounding.md">rubric's research grounding</a>.</p>
+  <ul class="refs">
+    <li><b>DORA — State of AI-assisted Software Development 2025</b> · throughput vs. stability, "AI is an amplifier" ·
+        <a href="https://dora.dev/dora-report-2025/">dora.dev/dora-report-2025</a></li>
+    <li><b>DORA four keys + rework rate</b> · lead time, deploy frequency, CFR, recovery time ·
+        <a href="https://dora.dev/guides/dora-metrics-four-keys/">dora.dev/guides/dora-metrics-four-keys</a></li>
+    <li><b>DORA AI Capabilities Model</b> · the 7 capabilities that amplify AI benefit ·
+        <a href="https://dora.dev/ai/capabilities-model/report/">dora.dev/ai/capabilities-model</a></li>
+    <li><b>DX Core 4</b> · speed · effectiveness · quality · impact — unifies DORA, SPACE &amp; DevEx ·
+        <a href="https://getdx.com/dx-core-4/">getdx.com/dx-core-4</a></li>
+    <li><b>SPACE framework</b> · satisfaction, performance, activity, communication, efficiency ·
+        <a href="https://queue.acm.org/detail.cfm?id=3454124">ACM Queue — The SPACE of Developer Productivity</a></li>
+    <li><b>DevEx framework</b> · feedback loops · cognitive load · flow state ·
+        <a href="https://queue.acm.org/detail.cfm?id=3595878">ACM Queue — DevEx: What Actually Drives Productivity</a></li>
+    <li><b>DX AI Measurement Framework</b> · utilization → impact → ROI of AI-assisted engineering ·
+        <a href="https://getdx.com/blog/ai-measurement-framework-guide/">getdx.com — AI measurement framework</a></li>
+    <li><b>Google HEART</b> · happiness, engagement, adoption, retention, task success — for product/Value metrics ·
+        <a href="https://research.google/pubs/measuring-the-user-experience-on-a-large-scale-user-centered-metrics-for-web-applications/">research.google — HEART (CHI 2010)</a></li>
+    <li><b>METR RCT 2025</b> · why perceived speed-up ≠ measured speed-up (+20% felt, −19% real) ·
+        <a href="https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/">metr.org — developer study</a></li>
+  </ul>
+</section>
+
+</div>
+
+<!-- ========== TAB 3 · EVENT CALENDAR ========== -->
+<div class="tab" id="tab-calendar" hidden>
+
+<section>
+  <h2><span class="n">📅</span>Three dates that matter</h2>
+  <p class="lead">Two ramp-up sessions on the runway, then the night itself.</p>
+
+  <div class="bigcal">
+    <div class="bc">
+      <div class="date">Fri 24 Jul</div>
+      <h3>Ramp-up Session 1</h3>
+      <p>From idea to a running start — the <b>NorthStar &amp; agentic maturity</b>, a live
+         <b>Xianix</b> example, and SWOT on your own agent play. ~1.5 hours; details on the
+         <a href="#sessions">Sessions</a> tab.</p>
+    </div>
+    <div class="bc">
+      <div class="date">Fri 31 Jul</div>
+      <h3>Ramp-up Session 2 — the Panel</h3>
+      <p>One week out: <b>engineering, delivery and senior leadership</b> on the agentic projects
+         and challenges we've already seen. Bring your hardest questions — details on the
+         <a href="#sessions">Sessions</a> tab.</p>
+    </div>
+    <div class="bc hero">
+      <div class="date">Fri 7 Aug · 5–9 PM</div>
+      <h3>ELEVATE 2026 — Event Day</h3>
+      <p>One floor, 25+ teams in a single sitting · ten judges roam in five pairs, scoring lap
+         7:00–8:00 · <b>Judges' Pick 8</b> announced 8:15 · the eight teach the whole company what
+         they built · dinner on the same floor.</p>
+      <div class="where">99x · 349 Colombo Main Rd, Colombo 00300</div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<!-- ========== TAB 4 · SESSIONS ========== -->
+<div class="tab" id="tab-sessions" hidden>
+
+<section>
+  <h2><span class="n">🎓</span>The ramp-up sessions</h2>
+  <p class="lead">Two sessions carry every team from idea to event-ready. Invitations below are shareable as-is.</p>
+
+  <div class="sess">
+    <div>
+      <h3>Ramp-up Session 1 — from idea to a running start</h3>
+      <span class="when">Fri 24 Jul · ~1.5h</span>
+      <ul>
+        <li><b>1/3 · The NorthStar &amp; agentic maturity</b> — plug the four pillars, then locate each
+            project on <b>Gartner's agentic-AI maturity roadmap</b> (five levels: task-specific
+            assistants → single agents with human gates → orchestrated multi-agent systems →
+            largely autonomous operations). The takeaway: <b>maturity is matched autonomy, not an
+            autonomy race</b> — Gartner predicts 40%+ of agentic projects canceled by 2027 for
+            unclear value, exactly what our rubric scores against.</li>
+        <li><b>2/3 · Xianix, live</b> — a worked example on <a href="https://xianix.ai/">xianix.ai</a>,
+            99x's own agent platform: FDE-style pods of AI agents + human engineers.
+            <i>"AI agents do the work. Humans own the outcome"</i> — the same thesis as our tagline.
+            Built on Claude Code plugins, open, no vendor lock-in.</li>
+        <li><b>3/3 · SWOT + the platform landscape</b> — each team SWOTs its agentic play, with a map
+            of what's popular beyond Xianix as of today: <b>managed platforms</b> — Microsoft Copilot
+            Studio, AWS Bedrock AgentCore, Google Vertex AI Agent Builder, OpenAI's agent platform,
+            Salesforce Agentforce; <b>frameworks &amp; SDKs</b> — LangGraph, Claude Agent SDK / Claude
+            Code (what Xianix builds on), CrewAI, Microsoft Agent Framework, AutoGen, LlamaIndex
+            Workflows, Pydantic AI. All of it is <b>wave 5 of the "5 waves of AI tooling"</b> —
+            platforms for custom agent workforces.</li>
+      </ul>
+    </div>
+    <figure><a href="assets/invite-rampup-1.png"><img src="assets/invite-rampup-1.png" alt="Invitation — Ramp-up Session 1"></a></figure>
+  </div>
+
+  <div class="sess">
+    <div>
+      <h3>Ramp-up Session 2 — the Panel Discussion</h3>
+      <span class="when">Fri 31 Jul</span>
+      <p class="lead" style="margin-top:14px">One week out. The panel represents three seats — and the
+         conversation is the projects and challenges we have <i>already seen</i>, so teams leave
+         inspired and with their open questions answered.</p>
+      <ul>
+        <li><b>Engineering</b> — people who have shipped agentic solutions on real projects</li>
+        <li><b>Delivery</b> — delivery leaders who run the projects teams will elevate</li>
+        <li><b>Senior leadership</b> — the strategic view</li>
+        <li><b>Format</b> — walk through what worked and what broke · bring your hardest questions</li>
+      </ul>
+    </div>
+    <figure><a href="assets/invite-rampup-2.png"><img src="assets/invite-rampup-2.png" alt="Invitation — Ramp-up Session 2, the Panel Discussion"></a></figure>
+  </div>
+
+  <div class="note"><b>Before the sessions:</b> the team-leads briefing (Mon 20 Jul) covers format,
+     expectations and the NorthStar pillars.</div>
+</section>
+
+</div>
+
+<!-- ========== TAB 5 · TEAM COMPOSITION ========== -->
+<div class="tab" id="tab-composition" hidden>
+
+<section>
+  <h2><span class="n">👥</span>The teams</h2>
+  <div class="stat">
+    <div class="s"><div class="v">25+</div><div class="l">teams — standalone &amp; domain</div></div>
+    <div class="s"><div class="v">80+</div><div class="l">builders, one floor (3 per team)</div></div>
+  </div>
+
+  <h2 style="font-size:22px;margin-top:34px">The participating teams</h2>
+  <p class="lead">One list, one column tells you if the team is a project standing alone (4+ members)
+     or a domain combination of smaller projects. Every team fields 3 builders.</p>
+  <table class="tc">
+    <tr><th>#</th><th>Team</th><th>Type</th><th>Combined from</th><th style="text-align:right">Pool</th></tr>
+    <tr><td>1</td><td><b>Compello Process</b></td><td>Standalone</td><td>—</td><td class="r">23</td></tr>
+    <tr><td>2</td><td><b>Adra Balancer</b></td><td>Standalone</td><td>—</td><td class="r">15</td></tr>
+    <tr><td>3</td><td><b>NRC</b></td><td>Standalone</td><td>—</td><td class="r">14</td></tr>
+    <tr><td>4</td><td><b>BUS</b></td><td>Standalone</td><td>— (+ BUS Research)</td><td class="r">14</td></tr>
+    <tr><td>5</td><td><b>Adra Task Manager</b></td><td>Standalone</td><td>—</td><td class="r">10</td></tr>
+    <tr><td>6</td><td><b>Amili Send</b></td><td>Standalone</td><td>—</td><td class="r">9</td></tr>
+    <tr><td>7</td><td><b>Hatteland</b></td><td>Standalone</td><td>—</td><td class="r">9</td></tr>
+    <tr><td>8</td><td><b>Adra Platform</b></td><td>Standalone</td><td>—</td><td class="r">9</td></tr>
+    <tr><td>9</td><td><b>Adra Matcher</b></td><td>Standalone</td><td>—</td><td class="r">9</td></tr>
+    <tr><td>10</td><td><b>Parkly</b></td><td>Standalone</td><td>—</td><td class="r">8</td></tr>
+    <tr><td>11</td><td><b>SuperOffice QA</b></td><td>Standalone</td><td>—</td><td class="r">8</td></tr>
+    <tr><td>12</td><td><b>SuperOffice Dev</b></td><td>Standalone</td><td>—</td><td class="r">7</td></tr>
+    <tr><td>13</td><td><b>UpNorway</b></td><td>Standalone</td><td>—</td><td class="r">7</td></tr>
+    <tr><td>14</td><td><b>Raintree Inc.</b></td><td>Standalone</td><td>—</td><td class="r">7</td></tr>
+    <tr><td>15</td><td><b>Solwr OMS</b></td><td>Standalone</td><td>— (+ OMS-Retail)</td><td class="r">7</td></tr>
+    <tr><td>16</td><td><b>CarCare</b></td><td>Standalone</td><td>—</td><td class="r">6</td></tr>
+    <tr><td>17</td><td><b>Amili EDI</b></td><td>Standalone</td><td>—</td><td class="r">4</td></tr>
+    <tr><td>18</td><td><b>Adra Journal Entry</b></td><td>Standalone</td><td>—</td><td class="r">4</td></tr>
+    <tr><td>19</td><td><b>My1min</b></td><td>Standalone</td><td>—</td><td class="r">4</td></tr>
+    <tr><td>20</td><td><b>BagID</b></td><td>Standalone</td><td>—</td><td class="r">4</td></tr>
+    <tr><td>21</td><td><b>Amili Collections &amp; Payments</b></td><td><span class="tchip ai" style="font-size:12px;padding:3px 12px">Domain combined</span></td><td>Amili ARM · Pay · AutoCollect</td><td class="r">6</td></tr>
+    <tr><td>22</td><td><b>Amili Customer Experience</b></td><td><span class="tchip ai" style="font-size:12px;padding:3px 12px">Domain combined</span></td><td>Amili MyPage · Customer Portal</td><td class="r">5</td></tr>
+    <tr><td>23</td><td><b>Finance &amp; Accounting</b></td><td><span class="tchip ai" style="font-size:12px;padding:3px 12px">Domain combined</span></td><td>Cantor · Kimaa · Flowyser</td><td class="r">5</td></tr>
+    <tr><td>24</td><td><b>Data Platforms</b></td><td><span class="tchip ai" style="font-size:12px;padding:3px 12px">Domain combined</span></td><td>Arktika · Amili Data Platform · Gture-Ditio</td><td class="r">5</td></tr>
+    <tr><td>25</td><td><b>Society &amp; Welfare</b></td><td><span class="tchip ai" style="font-size:12px;padding:3px 12px">Domain combined</span></td><td>Friskus · SosialT · No Isolation · VardaCare · Gov Digitalization</td><td class="r">8</td></tr>
+    <tr><td>26</td><td><b>Built Environment</b></td><td><span class="tchip ai" style="font-size:12px;padding:3px 12px">Domain combined</span></td><td>Boligmappa-Tilde · AreaSim</td><td class="r">5</td></tr>
+    <tr><td>27</td><td><b>Incrementi</b></td><td><span class="tchip ai" style="font-size:12px;padding:3px 12px">Domain combined</span></td><td>Envo · Sebastian AS</td><td class="r">4</td></tr>
+    <tr><td>28</td><td><b>Products &amp; IoT</b></td><td><span class="tchip ai" style="font-size:12px;padding:3px 12px">Domain combined</span></td><td>Plaato · Grunt · Norwegian SubSea · Kahoot</td><td class="r">6</td></tr>
+    <tr><td>29</td><td><b>Enablement</b></td><td><span class="tchip ai" style="font-size:12px;padding:3px 12px">Domain combined</span></td><td>BA · UX · QA Development · Internal Projects</td><td class="r">6</td></tr>
+  </table>
+
+
+
+</section>
+
+</div>
+
+
+<footer><div class="wrap">
+  ELEVATE 2026 · built by the organizing team ·
+  <a href="https://github.com/99x-Projects/elevate-2026">github.com/99x-Projects/elevate-2026</a>
+</div></footer>
+
+<script>
+(function(){
+  var tabs = ["pack","guide","calendar","sessions","composition"];
+  function show(name){
+    tabs.forEach(function(t){
+      document.getElementById("tab-"+t).hidden = (t !== name);
+      var link = document.querySelector('.tabs a[data-tab="'+t+'"]');
+      link.classList.toggle("on", t === name);
+    });
+  }
+  function route(){
+    var h = location.hash.replace("#","");
+    if (tabs.indexOf(h) >= 0){ show(h); window.scrollTo(0,0); return; }
+    var el = h && document.getElementById(h);
+    if (el){
+      var tab = el.closest(".tab");
+      if (tab) show(tab.id.replace("tab-",""));
+      el.scrollIntoView();
+    } else show("calendar");
+  }
+  window.addEventListener("hashchange", route);
+  route();
+})();
+</script>
+</body></html>
