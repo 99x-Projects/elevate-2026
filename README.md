@@ -18,6 +18,7 @@ your metric, and the runway sessions.
 - [`ramp-up/session-1/`](ramp-up/session-1/) — slides, hands-on guide and sample material from Ramp-up 1
 - [`ramp-up/session-2-panel/`](ramp-up/session-2-panel/) — the Panel: intro, questions, notes
 - [`resources/`](resources/) — downloads for teams (cheat-sheets, reading list)
+- [`TEAMS.md`](TEAMS.md) — team leads and participants; raise a PR to fill in your team
 
 The site itself is published to the `gh-pages` branch — don't edit it here.
 
