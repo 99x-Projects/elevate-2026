@@ -144,7 +144,7 @@ Keep your section's heading and position in the list as-is — just fill in the 
 - **Participants:**
   - _TBD_
 
-## 19. Friskus · SosialT · No Isolation · VardaCare · Gov Digitalization
+## 19. Friskus · SosialT · No Isolation · Gov Digitalization
 
 - **Team Name:** _TBD_
 - **Team Lead:** _TBD_
@@ -227,3 +227,11 @@ Keep your section's heading and position in the list as-is — just fill in the 
 - **Team Lead:** _TBD_
 - **Participants:**
   - _TBD_
+
+## 31. VardaCare
+
+- **Team Name:** Odyssey
+- **Team Lead:** Zameer
+- **Participants:**
+  - Zameer
+
