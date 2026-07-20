@@ -4,10 +4,11 @@ This is where every team fills in who's actually showing up on the night.
 
 ## How to submit
 
-1. Find your team's section below.
-2. Replace `_TBD_` with your **Team Name** (pick something fun — this is what gets
+1. [Fork this repo](https://github.com/99x-Projects/elevate-2026/fork).
+2. Find your team's section below and edit `TEAMS.md` on your fork.
+3. Replace `_TBD_` with your **Team Name** (pick something fun — this is what gets
    announced on the night), your **Team Lead**, and your **Participants** (one per line).
-3. Open a pull request with your changes. That's it.
+4. Open a pull request back to `main` on this repo. That's it.
 
 Keep your section's heading and position in the list as-is — just fill in the details underneath it.
 
