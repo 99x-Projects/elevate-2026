@@ -201,6 +201,60 @@
   .stage ul{margin:10px 0 0 16px;font-size:14px;color:#B3AFC8}
   .stage li{margin:5px 0}
 
+  /* extended guide — lifecycle map */
+  .subhead{font-size:clamp(18px,2.2vw,23px);font-weight:800;color:#D9D6CF;margin:10px 0 0}
+  .subhead .em{color:#D08770}
+  .lcline{display:flex;gap:14px;align-items:stretch;flex-wrap:wrap;margin:30px 0 10px}
+  .lcend{border:2.5px solid #D08770;border-radius:14px;padding:16px 14px;display:flex;align-items:center;justify-content:center;
+         font-size:12.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#D08770;flex:none;min-width:64px;
+         text-align:center}
+  .lcgroup{border:2px dashed #3A3656;border-radius:16px;padding:14px 14px 16px;flex:5;min-width:340px}
+  .lcgroup.ops{flex:2;min-width:300px}
+  .lcgroup .glab{font-size:11px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:#938FB0;margin:0 0 10px 4px}
+  .lcnodes{display:flex;gap:8px;flex-wrap:wrap}
+  .lcnode{border:2px solid #2E2B4B;border-radius:12px;padding:12px 14px;background:#1A1738;flex:1;min-width:130px}
+  .lcnode h4{font-size:14.5px;font-weight:800;color:#F0EEE9}
+  .lcnode p{font-size:12.5px;color:#938FB0;margin-top:3px}
+  .lcnode .eps{display:flex;gap:5px;flex-wrap:wrap;margin-top:10px}
+  a.ep{display:inline-flex;width:24px;height:24px;border-radius:50%;background:#D08770;color:#0D0C24;font-size:12.5px;
+       font-weight:800;align-items:center;justify-content:center;text-decoration:none}
+  a.ep:hover{background:#F0EEE9}
+  .epgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:22px;margin:26px 0 10px}
+  .epcard{border:2px solid #2E2B4B;border-radius:14px;padding:20px 22px;background:#1A1738;display:flex;flex-direction:column}
+  .epcard h3{font-size:17.5px;font-weight:800;color:#F0EEE9;display:flex;align-items:center;gap:10px}
+  .epcard h3 .num{display:inline-flex;flex:none;width:27px;height:27px;border-radius:50%;background:#D08770;color:#0D0C24;
+       font-size:13.5px;align-items:center;justify-content:center}
+  .epcard .owns{font-size:14.5px;color:#D9D6CF;margin-top:12px}
+  .epcard .owns b{color:#F0EEE9}
+  .epcard .row{font-size:13.5px;color:#938FB0;margin-top:9px;line-height:1.5}
+  .epcard .row b{color:#D9D6CF}
+  .epcard a.ex{display:inline-flex;margin-left:8px;border:1.5px solid #3A3656;border-radius:999px;padding:3px 11px;
+       font-size:10.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#938FB0;text-decoration:none;
+       vertical-align:middle}
+  .epcard a.ex:hover{border-color:#D08770;color:#D08770}
+  .epcard .foot{margin-top:auto;padding-top:13px;border-top:1.5px solid #2E2B4B;display:flex;gap:10px;align-items:center;
+       flex-wrap:wrap;font-size:13px}
+  .epcard .owns + .foot, .epcard .row + .foot{margin-top:16px}
+  .epcard .foot .m{font-weight:700;font-size:13px;border:1.5px solid #D08770;border-radius:6px;padding:5px 11px;
+       color:#D08770;text-decoration:none}
+  .epcard .foot .m:hover{background:#D08770;color:#0D0C24}
+  .epcard .st{font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:#938FB0;margin-bottom:8px}
+
+  /* faq */
+  .faqgroup{margin:28px 0}
+  .faqgroup .glab{font-size:11.5px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:#D08770;margin:0 0 12px 2px}
+  .faq{border:2px solid #2E2B4B;border-radius:12px;background:#1A1738;margin-bottom:12px;overflow:hidden}
+  .faq summary{list-style:none;cursor:pointer;padding:16px 22px;font-size:15.5px;font-weight:700;color:#F0EEE9;
+       display:flex;align-items:center;justify-content:space-between;gap:14px}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";flex:none;color:#D08770;font-size:20px;font-weight:800}
+  .faq[open] summary::after{content:"–"}
+  .faq[open] summary{border-bottom:1.5px solid #2E2B4B}
+  .faq .a{padding:4px 22px 20px;font-size:14.5px;color:#D9D6CF;line-height:1.6}
+  .faq .a b{color:#F0EEE9}
+  .faq .a p{margin:0 0 10px}
+  .faq .a p:last-child{margin-bottom:0}
+
   /* marketing */
   .mkt{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px;margin:30px 0 10px}
   .mcard{border:2px solid #2E2B4B;border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
@@ -225,10 +279,12 @@
   <div class="tabs" style="margin-top:30px">
     <a href="#purpose" data-tab="purpose" class="on">Purpose</a>
     <a href="#calendar" data-tab="calendar">Event Calendar</a>
-    <a href="#guide" data-tab="guide">Team Guide</a>
+    <a href="#guide" data-tab="guide">Guide</a>
+    <a href="#extended" data-tab="extended">Walkthrough</a>
     <a href="#pack" data-tab="pack">Evaluation</a>
     <a href="#sessions" data-tab="sessions">Sessions</a>
     <a href="#composition" data-tab="composition">Teams</a>
+    <a href="#faq" data-tab="faq">FAQ</a>
   </div>
 </div></header>
 
@@ -290,6 +346,117 @@
   </div>
 
   <div class="tagclose">Agents deliver. <span class="em">You decide.</span></div>
+</section>
+
+</div>
+
+<!-- ========== TAB 0b · FAQ ========== -->
+<div class="tab" id="tab-faq" hidden>
+
+<section id="faqtop">
+  <h2><span class="n">❓</span>Questions we've actually been asked</h2>
+  <p class="lead" style="max-width:700px">Same questions kept coming up on the runway, so here they are in
+     one place — from what this event even is, to what you need on the table on the night.</p>
+
+  <div class="faqgroup">
+    <div class="glab">What this is</div>
+
+    <details class="faq" open>
+      <summary>Is ELEVATE actually a hackathon?</summary>
+      <div class="a">
+        <p>Yes, in the ways that matter — one night, small teams, real building, a panel that picks
+           winners at the end.</p>
+        <p>What's different is <b>what "winning" means</b>. A traditional hackathon rewards how much
+           you could execute under time pressure — raw <b>speed of execution</b>. Agents have made
+           execution speed cheap for everyone now; <a href="#purposetop">effort is no longer the scarce
+           thing</a> — judgment is. So ELEVATE doesn't score how fast you typed. It scores whether you
+           gave an agent <b>one real, recurring job</b> on your real project, put a <b>human decision
+           gate</b> in front of it, and can prove — with a number — that it moved the needle. Same
+           night, same energy, a different scoreboard.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>If not speed, what exactly gets scored?</summary>
+      <div class="a">
+        <p>Six steps, in order, on one card per team (<a href="#scorecards">the floor scorecard</a>):
+           <b>the pain</b> — is it real and costly · <b>the mapping</b> — pain → declared pillar →
+           measure · <b>the agent</b> — human as operator or as approver · <b>the gate</b> — where the
+           human decides, shown firing · <b>the proof</b> — did the declared pillar actually move ·
+           <b>the offering</b> — a named user, workflow and cost story beyond the demo. /30 total —
+           see <a href="#judges">how the evening flows</a>.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>What counts as "genuinely agentic" — and what doesn't?</summary>
+      <div class="a">
+        <p>The qualifying bar, checked before a team is even ranked: <b>genuinely agentic</b> — a
+           prompt chain you drive step by step is not an agent, it should be running multi-step work
+           with you closer to approver than operator · <b>ran on the real project</b> — rough is fine,
+           mock data is not · <b>pillar declared</b> — you're only scored on the pillar you name.</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="faqgroup">
+    <div class="glab">What you actually need to deliver</div>
+
+    <details class="faq">
+      <summary>What do we need to bring to the table on the night?</summary>
+      <div class="a">
+        <p>One team, one metric — a <b>declared pillar</b>, one agent doing one recurring job
+           end-to-end with a <b>human gate</b> in front of production, and <b>two numbers</b>: a
+           baseline from before, and what the agent drove it to. Bring both, not one. The full
+           playbook is on the <a href="#onemetric">Guide</a>; for the concrete catalog of jobs
+           teams elsewhere already hand to agents, see the <a href="#lifeline">Walkthrough</a>.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>Do we need a real customer deployment to score well?</summary>
+      <div class="a">
+        <p>No. <a href="#proofladder">Projected is fine — no metric is not.</a> If production wasn't
+           reachable in your two weeks, show the math behind your projection candidly. What costs a
+           team is asserting movement with nothing behind it — not the absence of a live customer.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>We don't know where to start — how do we pick our pain?</summary>
+      <div class="a">
+        <p>Walk your own project stage by stage and ask what recurs, what it costs, and who feels it —
+           <a href="#elevatepath">the four moves</a> on the Guide. If that's still too abstract,
+           the <a href="#lifeline">Walkthrough</a> lays your project's lifecycle out left to right
+           with ten spots teams elsewhere already hand to agents — steal the one that hurts your
+           project most.</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="faqgroup">
+    <div class="glab">The night, and after</div>
+
+    <details class="faq">
+      <summary>What's the timeline before and on the night?</summary>
+      <div class="a">
+        <p>Two ramp-up sessions carry every team in — Fri 24 Jul (idea to a running start) and Fri 31
+           Jul (the panel) — then event day, Fri 7 Aug, 5–9 PM, one floor, judges' scoring lap
+           7:00–8:00, Judges' Pick 8 announced 8:15. Full detail on <a href="#calendar">Event
+           Calendar</a>.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>What happens to the Judges' Pick 8 — and to everyone else?</summary>
+      <div class="a">
+        <p>The eight teach the whole company what they built, the same evening. The strongest go on to
+           the 99x expert panel — and from there, toward real customer offerings (that's exactly what
+           scorecard step six, "the offering," is checking for). Every team leaves with 2–3 written
+           notes from judges, Judges' Pick 8 or not.</p>
+      </div>
+    </details>
+  </div>
 </section>
 
 </div>
@@ -560,6 +727,204 @@
 
 </div>
 
+<!-- ========== TAB 2b · EXTENDED GUIDE ========== -->
+<div class="tab" id="tab-extended" hidden>
+
+<section id="lifeline">
+  <h2><span class="n">🗺️</span>Your project, left to right — and where an agent can own a job</h2>
+  <p class="subhead">Find where it compounds <span class="em">→ delegate to an agent.</span></p>
+
+  <p class="lead"><b>Say you're a forward-deployed engineer on one of our projects.</b> Doesn't matter
+     which role — every project runs the same line: someone states a requirement, a solution gets shaped,
+     you build it, it gets tested, it ships, it runs, users react, and their feedback comes back around.
+     That's the strip below, left to right.</p>
+  <p class="lead"><b>Now walk your own project along that line — with an optimizer's eye.</b> At each
+     stage, ask what recurs and what it costs: the hours that go into grooming the backlog, re-running
+     the regression suite, triaging the same class of ticket, walking the release checklist. Each of
+     those is a recurring job with a measurable cost. And because the stages feed each other, the cost
+     travels: time lost at requirements resurfaces as rework in construction, again in QA, again at
+     release. That's what you're hunting — the stage where optimizing one job pays off everywhere
+     downstream of it.</p>
+  <p class="lead"><b>The ten numbered spots mark the common places</b> — jobs teams elsewhere already
+     hand to an agent end-to-end, with a human still deciding what ships. They're a starting menu, not
+     a boundary. If your project's biggest win sits somewhere else entirely — say a domain agent that
+     carries your product's business rules, your customer's regulations, your data — that spot counts
+     just as much. Walk the line, find where the optimization compounds hardest, and delegate that job
+     to an agent.</p>
+
+  <div class="lcline">
+    <div class="lcend">Devs</div>
+    <div class="lcgroup"><div class="glab">Dev scope</div>
+      <div class="lcnodes">
+        <div class="lcnode"><h4>Requirement</h4><p>what to build</p><div class="eps"><a class="ep" href="#ep1">1</a></div></div>
+        <div class="lcnode"><h4>Solutioning</h4><p>how to build it</p><div class="eps"><a class="ep" href="#ep2">2</a></div></div>
+        <div class="lcnode"><h4>Construction</h4><p>building it</p><div class="eps"><a class="ep" href="#ep3">3</a><a class="ep" href="#ep4">4</a></div></div>
+        <div class="lcnode"><h4>Quality</h4><p>proving it works</p><div class="eps"><a class="ep" href="#ep5">5</a><a class="ep" href="#ep6">6</a></div></div>
+        <div class="lcnode"><h4>Deployment</h4><p>shipping it</p><div class="eps"><a class="ep" href="#ep7">7</a></div></div>
+      </div></div>
+    <div class="lcgroup ops"><div class="glab">Operations</div>
+      <div class="lcnodes">
+        <div class="lcnode"><h4>Run &amp; Support</h4><p>keeping it alive</p><div class="eps"><a class="ep" href="#ep8">8</a><a class="ep" href="#ep9">9</a></div></div>
+        <div class="lcnode"><h4>Continuous Feedback</h4><p>learning from use</p><div class="eps"><a class="ep" href="#ep10">10</a></div></div>
+      </div></div>
+    <div class="lcend">Users</div>
+  </div>
+
+  <div class="note"><b>How to read this map:</b> pick the <b>spot</b>, not the tool. A spot is a recurring
+     job on your project that an agent runs end-to-end while a human decides what ships. The cards below
+     show what teams already hand over at each spot.</div>
+</section>
+
+<section id="embeds">
+  <h2><span class="n">📍</span>Real embed points, example agents</h2>
+  <p class="lead">One card per job. Each shows what the agent <b>owns</b>, the agents teams actually run
+     today, <b>where the human gate sits</b>, the pillar the job serves, and the metric that proves it moved.
+     Evidence is labeled the way we'd want yours labeled: <b>measured</b> beats <b>documented</b> beats
+     <b>vendor-reported</b>.</p>
+
+  <div class="epgrid">
+    <div class="epcard" id="ep1">
+      <div class="st">Requirement</div>
+      <h3><span class="num">1</span>Ticket triage &amp; tracker actions</h3>
+      <div class="owns"><b>The agent owns:</b> picking up assigned tickets, acting on comment mentions,
+         routing and updating issues inside your tracker — every action logged.</div>
+      <div class="row"><b>The gate:</b> a human assigns or mentions the agent; admins govern what it may
+         touch; the audit log keeps it honest.
+         <a class="ex" href="https://siliconangle.com/2026/05/06/atlassian-opens-teamwork-graph-pushes-rovo-agentic-execution-team-26/"
+            title="In the wild: Atlassian Rovo agents in Jira — 5M monthly users, millions of workflow actions automated. (vendor-reported)">eg</a></div>
+      <div class="foot"><span class="chip c1">Higher Pace</span>
+         <a class="m" href="#menu">metric: hand-off / wait time ↓</a></div>
+    </div>
+
+    <div class="epcard" id="ep2">
+      <div class="st">Solutioning</div>
+      <h3><span class="num">2</span>Backlog grooming &amp; duplicate hunting</h3>
+      <div class="owns"><b>The agent owns:</b> sweeping the backlog for duplicates and stale issues,
+         drafting the merges and rewrites for approval.</div>
+      <div class="row"><b>The gate:</b> nothing changes in the tracker until a human accepts each suggestion.
+         <a class="ex" href="https://arxiv.org/html/2507.10753v1"
+            title="In the wild: measured with senior PMs at two Nordic consultancies — 12–21 duplicates found vs 7–12 by humans, 45% faster per duplicate, satisfaction 2–4/10 → 7–9/10. (measured, published study)">eg</a></div>
+      <div class="foot"><span class="chip c5">A Team That Thrives</span>
+         <a class="m" href="#menu">metric: chore hours ↓ · team pulse ↑</a></div>
+    </div>
+
+    <div class="epcard" id="ep3">
+      <div class="st">Construction</div>
+      <h3><span class="num">3</span>In-session agentic coding</h3>
+      <div class="owns"><b>The agent owns:</b> the execution loop — writing, fixing, testing — while you
+         keep the plan.</div>
+      <div class="row"><b>The gate:</b> you — steering in session, reviewing everything that lands.
+         <a class="ex" href="https://www.anthropic.com/research/claude-code-expertise"
+            title="In the wild: across ~400,000 real Claude Code sessions, people held ~70% of planning decisions while the agent carried ~80% of execution. Skilled steering separates 33% verified success from 15%. (vendor telemetry)">eg</a></div>
+      <div class="foot"><span class="chip c1">Higher Pace</span>
+         <a class="m" href="#menu">metric: lead time for a real task ↓</a></div>
+    </div>
+
+    <div class="epcard" id="ep4">
+      <div class="st">Construction</div>
+      <h3><span class="num">4</span>Async issue-to-PR agents</h3>
+      <div class="owns"><b>The agent owns:</b> a whole ticket — assigned like a teammate, works unattended
+         in a sandbox, hands back a pull request.</div>
+      <div class="row"><b>The gate:</b> the pull request. The agent never merges its own work.
+         <a class="ex" href="https://docs.github.com/copilot/concepts/agents/coding-agent/about-coding-agent"
+            title="In the wild: GitHub Copilot coding agent, Cursor background agents, OpenAI Codex, Claude Code remote tasks — none auto-merge by default. (documented)">eg</a></div>
+      <div class="foot"><span class="chip c1">Higher Pace</span>
+         <a class="m" href="#menu">metric: task cycle time ↓</a></div>
+    </div>
+
+    <div class="epcard" id="ep5">
+      <div class="st">Quality</div>
+      <h3><span class="num">5</span>First-pass code review</h3>
+      <div class="owns"><b>The agent owns:</b> the first full review of every merge request — security,
+         performance, quality — before a human ever looks at the diff.</div>
+      <div class="row"><b>The gate:</b> tiered — advisory comments flow through; a critical finding blocks
+         the merge until a human overrides, and every override is logged.
+         <a class="ex" href="https://blog.cloudflare.com/ai-code-review/"
+            title="In the wild: Cloudflare's in-house reviewer ran 131,000+ reviews across 48,000 merge requests in its first 30 days, 0.6% human-override rate. Copilot code review and CodeRabbit are the common off-the-shelf picks. (engineering blog)">eg</a></div>
+      <div class="foot"><span class="chip c2">Better Quality</span>
+         <a class="m" href="#menu">metric: rework rate ↓ · change failure rate ↓</a></div>
+    </div>
+
+    <div class="epcard" id="ep6">
+      <div class="st">Quality</div>
+      <h3><span class="num">6</span>The regression suite, owned</h3>
+      <div class="owns"><b>The agent owns:</b> creating <i>and maintaining</i> the end-to-end test suite —
+         triaging flakes and fixing broken tests as the app changes, not generating tests once.</div>
+      <div class="row"><b>The gate:</b> your team approves the coverage and owns the release decision on
+         pass / fail.
+         <a class="ex" href="https://qaskills.sh/blog/qa-wolf-ai-testing-guide-2026"
+            title="In the wild: QA Wolf's AI-plus-human managed service — teams gate releases on a suite they never author themselves. (documented)">eg</a></div>
+      <div class="foot"><span class="chip c2">Better Quality</span>
+         <a class="m" href="#menu">metric: escaped defects ↓</a></div>
+    </div>
+
+    <div class="epcard" id="ep7">
+      <div class="st">Deployment</div>
+      <h3><span class="num">7</span>Dependency &amp; upgrade toil</h3>
+      <div class="owns"><b>The agent owns:</b> detecting outdated or vulnerable dependencies, opening the
+         PRs, and merging the safe ones on its own — behind your required checks.</div>
+      <div class="row"><b>The gate:</b> the policy is the gate — you define which checks must pass and
+         which update types may self-merge.
+         <a class="ex" href="https://docs.renovatebot.com/key-concepts/automerge/"
+            title="In the wild: Renovate and Dependabot auto-merging behind branch protection. (documented in the platform docs)">eg</a></div>
+      <div class="foot"><span class="chip c1">Higher Pace</span>
+         <a class="m" href="#menu">metric: toil hours ↓ · update lead time ↓</a></div>
+    </div>
+
+    <div class="epcard" id="ep8">
+      <div class="st">Run &amp; Support</div>
+      <h3><span class="num">8</span>First-response incident investigation</h3>
+      <div class="owns"><b>The agent owns:</b> the first minutes of an incident — parallel diagnostic
+         queries, hypotheses, and a written findings report in the incident channel before you've even
+         context-switched.</div>
+      <div class="row"><b>The gate:</b> the responding engineer makes the diagnosis call — the agent never
+         closes incidents or pushes fixes.
+         <a class="ex" href="https://incident.io/blog/ai-sre-agent-definition"
+            title="In the wild: incident.io's AI SRE posts its investigation within a minute or two of an incident firing. (vendor-reported)">eg</a></div>
+      <div class="foot"><span class="chip c5">A Team That Thrives</span>
+         <a class="m" href="#menu">metric: time to recover ↓ · interrupt load ↓</a></div>
+    </div>
+
+    <div class="epcard" id="ep9">
+      <div class="st">Run &amp; Support</div>
+      <h3><span class="num">9</span>First-line support resolution</h3>
+      <div class="owns"><b>The agent owns:</b> answering and closing the support conversations it can —
+         end-to-end — and escalating the rest.</div>
+      <div class="row"><b>The gate:</b> escalation to a human — and humans own the knowledge the agent
+         answers from.
+         <a class="ex" href="https://www.intercom.com/help/en/articles/8205718-fin-ai-agent-outcomes"
+            title="In the wild: Intercom's Fin and Decagon report resolution rates from 42% to 70%+ at companies like Notion and Rippling. (vendor case studies — treat the exact numbers as theirs)">eg</a></div>
+      <div class="foot"><span class="chip c3">Extended Value</span>
+         <a class="m" href="#menu">metric: resolution rate ↑ · first-response time ↓</a></div>
+    </div>
+
+    <div class="epcard" id="ep10">
+      <div class="st">Continuous Feedback</div>
+      <h3><span class="num">10</span>Feedback mining at scale</h3>
+      <div class="owns"><b>The agent owns:</b> ingesting and categorizing every channel of user feedback —
+         tickets, reviews, NPS, calls — and surfacing the trends worth acting on.</div>
+      <div class="row"><b>The gate:</b> product leadership makes the roadmap call — the agent never
+         prioritizes.
+         <a class="ex" href="https://www.enterpret.com/customers/notion"
+            title="In the wild: Enterpret at Notion cut the monthly user-insights report from two weeks to three days. (vendor case study)">eg</a></div>
+      <div class="foot"><span class="chip c3">Extended Value</span>
+         <a class="m" href="#menu">metric: time-to-insight ↓ · task success on the pilot ↑</a></div>
+    </div>
+  </div>
+
+</section>
+
+<section id="pickspot">
+  <h2><span class="n">🎯</span>Pick your spot</h2>
+  <div class="bigline">One decision: <span class="em">which spot on this line hurts your project
+     most?</span> Give that job to an agent. Everything else follows.</div>
+  <p class="lead">The spot's pillar is your declared pillar. Its metric family is your driver-metric
+     shortlist — <a href="#menu">the metric menu</a>. Baseline in week one, drive in week two, and if
+     production wasn't reachable in two weeks, <a href="#proofladder">projected is fine</a>.</p>
+</section>
+
+</div>
+
 <!-- ========== TAB 3 · EVENT CALENDAR ========== -->
 <div class="tab" id="tab-calendar" hidden>
 
@@ -717,7 +1082,7 @@
 
 <script>
 (function(){
-  var tabs = ["purpose","pack","guide","calendar","sessions","composition"];
+  var tabs = ["purpose","calendar","guide","extended","pack","sessions","composition","faq"];
   function show(name){
     tabs.forEach(function(t){
       document.getElementById("tab-"+t).hidden = (t !== name);
