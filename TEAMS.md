@@ -181,10 +181,13 @@ Keep your section's heading and position in the list as-is — just fill in the 
 
 ## 24. Raintree Inc.
 
-- **Team Name:** _TBD_
-- **Team Lead:** _TBD_
+- **Team Name:** Rainees
+- **Team Lead:** Hasitha Weerakoon
 - **Participants:**
-  - _TBD_
+  - Hasitha
+  - Sanjeewa
+  - Abhiman 
+  - Anura
 
 ## 25. Solwr OMS
 
