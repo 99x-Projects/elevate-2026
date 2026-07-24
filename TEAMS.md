@@ -111,10 +111,12 @@ Keep your section's heading and position in the list as-is — just fill in the 
 
 ## 14. BUS
 
-- **Team Name:** _TBD_
-- **Team Lead:** _TBD_
+- **Team Name:** BUS Express
+- **Team Lead:** Gihan Wijesinghe
 - **Participants:**
-  - _TBD_
+  - Chathusara Tennakoon
+  - Ishrath Raji
+  - Shenal Pelpola
 
 ## 15. Cantor · Kimaa
 
