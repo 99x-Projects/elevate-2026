@@ -114,6 +114,7 @@ Keep your section's heading and position in the list as-is — just fill in the 
 - **Team Name:** BUS Express
 - **Team Lead:** Gihan Wijesinghe
 - **Participants:**
+  - Gihan Wijesinghe
   - Chathusara Tennakoon
   - Ishrath Raji
   - Shenal Pelpola
