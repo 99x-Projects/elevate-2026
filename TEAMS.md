@@ -62,17 +62,23 @@ Keep your section's heading and position in the list as-is — just fill in the 
 
 ## 7. Amili ARM · Pay · AutoCollect
 
-- **Team Name:** _TBD_
-- **Team Lead:** _TBD_
+- **Team Name:** ARM
+- **Team Lead:** Omer M
 - **Participants:**
-  - _TBD_
+  - Eranda K
+  - Eranga U
+  - Asinthe B
+  - Omer M
 
 ## 8. Amili EDI
 
-- **Team Name:** _TBD_
-- **Team Lead:** _TBD_
-- **Participants:**
-  - _TBD_
+- **Team Name:** EDIssey
+- **Team Lead:** Purindu W
+- **Participants:**  
+  - Kushan H
+  - Navodh F
+  - Bhanuka A
+  - Purindu W
 
 ## 9. Amili MyPage · Customer Portal
 
@@ -86,10 +92,13 @@ Keep your section's heading and position in the list as-is — just fill in the 
 
 ## 10. Amili Send
 
-- **Team Name:** _TBD_
-- **Team Lead:** _TBD_
+- **Team Name:** Send
+- **Team Lead:** Janith P
 - **Participants:**
-  - _TBD_
+  - Chathulanka G
+  - Nimna P
+  - Prasanna L
+  - Janith P
 
 ## 11. Arktika · Amili Data Platform · Gture-Ditio
 
