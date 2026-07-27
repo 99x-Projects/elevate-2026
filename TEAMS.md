@@ -76,10 +76,13 @@ Keep your section's heading and position in the list as-is — just fill in the 
 
 ## 9. Amili MyPage · Customer Portal
 
-- **Team Name:** _TBD_
-- **Team Lead:** _TBD_
+- **Team Name:** Phoelantis
+- **Team Lead:** Pasindu E
 - **Participants:**
-  - _TBD_
+  - Pasindu E
+  - Dihas L
+  - Kumuthu P
+  - Risni D
 
 ## 10. Amili Send
 
