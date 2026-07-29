@@ -14,6 +14,7 @@ your metric, and the ramp-up material.
 
 ## What lives here
 
+- [`ramp-up/videos/`](ramp-up/videos/) — links to the pre-recorded expert ramp-up videos, posted as they're released
 - [`resources/`](resources/) — downloads for teams (cheat-sheets, reading list)
 - [`TEAMS.md`](TEAMS.md) — team leads and participants; raise a PR to fill in your team
 
