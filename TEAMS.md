@@ -243,10 +243,12 @@ Keep your section's heading and position in the list as-is — just fill in the 
 
 ## 30. UpNorway
 
-- **Team Name:** _TBD_
-- **Team Lead:** _TBD_
+- **Team Name:** NorVengers
+- **Team Lead:** Vinusha
 - **Participants:**
-  - _TBD_
+  - Vinusha
+  - Kirulu
+  - Sachintha
 
 ## 31. VardaCare
 
