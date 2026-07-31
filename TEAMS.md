@@ -210,10 +210,12 @@ Keep your section's heading and position in the list as-is — just fill in the 
 
 ## 25. Solwr OMS
 
-- **Team Name:** _TBD_
-- **Team Lead:** _TBD_
+- **Team Name:** Solwr
+- **Team Lead:** Yomal De Silva
 - **Participants:**
-  - _TBD_
+  - Yomal De Silva
+  - Hasith Ranasinghe
+  - Vihanga Liyanage
 
 ## 26. SuperOffice AI
 
