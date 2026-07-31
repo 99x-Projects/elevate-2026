@@ -154,10 +154,12 @@ Keep your section's heading and position in the list as-is — just fill in the 
 
 ## 18. Envo · Sebastian AS
 
-- **Team Name:** _TBD_
-- **Team Lead:** _TBD_
+- **Team Name:** ENVO
+- **Team Lead:** Kasun Gunathilaka
 - **Participants:**
-  - _TBD_
+  - Kasun De Silva
+  - Sapumal Thepulangoda
+  - Suneth Wijayasiri
 
 ## 19. Friskus · SosialT · No Isolation · Gov Digitalization
 
