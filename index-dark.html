@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ELEVATE 2026 — The Hub</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  :root{
+    --bg:#0D0C24; --bg2:#1A1738; --ink:#F0EEE9; --muted:#B3AFC8; --dim:#938FB0;
+    --line:#2E2B4B; --line2:#3A3656; --accent:#D08770; --gold:#EBCB8B;
+    --g1:#A3BE8C; --g2:#8FBCBB; --g3:#EBCB8B; --g4:#81A1C1;
+  }
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);line-height:1.65;
+       font-family:"Avenir Next","Segoe UI","Helvetica Neue",system-ui,sans-serif;
+       -webkit-font-smoothing:antialiased}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 clamp(20px,5vw,40px)}
+  .em{color:var(--accent)}
+
+  /* sticky nav */
+  .nav{position:sticky;top:0;z-index:50;background:rgba(13,12,36,.85);
+       backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:20px}
+  .brand{font-weight:800;letter-spacing:.02em;font-size:16px;white-space:nowrap}
+  .brand .dot{color:var(--accent)}
+  .navlinks{display:flex;gap:6px;flex-wrap:wrap}
+  .navlinks a{color:var(--muted);font-size:14px;font-weight:600;padding:7px 12px;border-radius:8px}
+  .navlinks a:hover{color:var(--ink);background:var(--bg2);text-decoration:none}
+  .navlinks a.active{color:var(--accent);background:var(--bg2)}
+  .navcta{background:var(--accent);color:#0D0C24 !important;font-weight:800;
+          padding:8px 16px;border-radius:999px;font-size:14px;white-space:nowrap}
+  .navcta:hover{text-decoration:none;filter:brightness(1.08)}
+  @media(max-width:860px){.navlinks{display:none}}
+
+  /* section rhythm */
+  section{padding:clamp(56px,9vw,110px) 0;border-bottom:1px solid var(--line)}
+  .eyebrow{color:var(--accent);font-size:13px;font-weight:800;letter-spacing:.22em;
+           text-transform:uppercase;margin-bottom:16px}
+  h2{font-size:clamp(28px,4.5vw,42px);font-weight:800;letter-spacing:-.01em;line-height:1.15}
+  .lead{color:var(--muted);font-size:clamp(17px,2vw,20px);margin-top:20px;max-width:760px}
+  .lead b{color:var(--ink)}
+
+  /* hero */
+  .hero{padding:clamp(70px,12vw,140px) 0 clamp(56px,9vw,100px);
+        border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+  .hero h1{font-size:clamp(38px,7vw,72px);font-weight:800;letter-spacing:-.02em;line-height:1.05;max-width:900px}
+  .hero .sub{color:var(--muted);font-size:clamp(18px,2.3vw,23px);margin-top:26px;max-width:720px}
+  .hero .sub b{color:var(--ink)}
+  .facts{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+  .fact{display:flex;align-items:center;gap:10px;background:var(--bg2);border:1px solid var(--line2);
+        border-radius:999px;padding:10px 18px;font-size:15px;font-weight:600}
+  .fact .k{color:var(--accent);font-weight:800}
+  .herocta{margin-top:36px;display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-block;font-weight:800;font-size:15px;padding:13px 26px;border-radius:999px}
+  .btn.primary{background:var(--accent);color:#0D0C24}
+  .btn.primary:hover{text-decoration:none;filter:brightness(1.08)}
+  .btn.ghost{border:1.5px solid var(--line2);color:var(--ink)}
+  .btn.ghost:hover{text-decoration:none;border-color:var(--accent);color:var(--accent)}
+  .pill-new{display:inline-block;background:var(--bg2);border:1px solid var(--accent);color:var(--gold);
+            font-size:13px;font-weight:800;letter-spacing:.04em;padding:7px 16px;border-radius:999px;margin-bottom:26px}
+
+  /* goals / pillars */
+  .goals{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin-top:44px}
+  .goal{border:1.5px solid var(--line2);border-radius:16px;padding:26px 26px 28px;background:var(--bg2)}
+  .goal .ic{font-size:26px;margin-bottom:14px}
+  .goal h3{font-size:21px;font-weight:800}
+  .goal p{color:var(--muted);font-size:15.5px;margin-top:10px}
+  .g1{border-top:4px solid var(--g1)}.g1 h3{color:var(--g1)}
+  .g2{border-top:4px solid var(--g2)}.g2 h3{color:var(--g2)}
+  .g3{border-top:4px solid var(--g3)}.g3 h3{color:var(--g3)}
+  .g4{border-top:4px solid var(--g4)}.g4 h3{color:var(--g4)}
+  .callout{border:1.5px solid var(--line2);border-radius:14px;padding:20px 24px;margin-top:28px;
+           color:#D9D6CF;font-size:16px;background:rgba(208,135,112,.06)}
+  .callout b{color:var(--ink)}
+
+  /* steps */
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin-top:44px}
+  .step{border:1.5px solid var(--line2);border-radius:16px;padding:26px;background:var(--bg2)}
+  .step .n{width:40px;height:40px;border-radius:50%;background:var(--accent);color:#0D0C24;
+           display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px}
+  .step h3{font-size:19px;font-weight:800;margin-top:16px}
+  .step p{color:var(--muted);font-size:15px;margin-top:9px}
+  .step p b{color:var(--ink)}
+
+  /* ideas */
+  .ideas{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:44px}
+  .idea{border:1.5px solid var(--line2);border-radius:14px;padding:22px 24px;background:var(--bg2)}
+  .idea .stage{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+  .idea h3{font-size:18px;font-weight:800;margin-top:6px}
+  .idea ul{margin:12px 0 0 18px;color:var(--muted);font-size:15px}
+  .idea li{margin:6px 0}
+  .idea li b{color:var(--ink)}
+
+  /* event flow */
+  .flow{display:flex;flex-wrap:wrap;gap:14px;margin-top:40px}
+  .fstep{flex:1;min-width:150px;border:1.5px solid var(--line2);border-radius:14px;padding:18px 20px;background:var(--bg2)}
+  .fstep .t{font-size:13px;font-weight:800;color:var(--accent)}
+  .fstep h4{font-size:16px;font-weight:800;margin-top:4px}
+  .fstep p{color:var(--dim);font-size:13.5px;margin-top:4px}
+  .when-where{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:40px}
+  .ww{border:1.5px solid var(--line2);border-radius:16px;padding:26px;background:var(--bg2)}
+  .ww .k{color:var(--accent);font-size:13px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+  .ww h3{font-size:22px;font-weight:800;margin-top:8px}
+  .ww p{color:var(--muted);font-size:15.5px;margin-top:8px}
+  .ww.hero-card{border-color:var(--accent)}
+
+  /* judging simple */
+  .judge{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;margin-top:36px}
+  .jc{border:1.5px solid var(--line2);border-radius:14px;padding:18px 20px;background:var(--bg2)}
+  .jc .num{color:var(--accent);font-weight:800;font-size:14px}
+  .jc h4{font-size:15.5px;font-weight:800;margin-top:6px}
+  .jc p{color:var(--dim);font-size:13.5px;margin-top:5px}
+
+  /* teams */
+  .stats{display:flex;gap:16px;flex-wrap:wrap;margin-top:36px}
+  .stat{border:1.5px solid var(--line2);border-radius:14px;padding:18px 28px;background:var(--bg2);min-width:150px}
+  .stat .v{font-size:34px;font-weight:800;color:var(--accent)}
+  .stat .l{font-size:14px;color:var(--muted);margin-top:2px}
+  .reg{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:24px}
+  .regcard{border:1.5px solid var(--line2);border-radius:16px;padding:26px;background:var(--bg2);
+           display:flex;flex-direction:column;align-items:flex-start}
+  .regcard .k{color:var(--accent);font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+  .regcard h3{font-size:20px;font-weight:800;margin-top:8px}
+  .regcard p{color:var(--muted);font-size:15px;margin:10px 0 20px;flex:1}
+  .teamgrid{display:flex;flex-wrap:wrap;gap:10px;margin-top:36px}
+  .tteam{border:1px solid var(--line2);border-radius:999px;padding:8px 16px;font-size:14px;color:#D9D6CF;background:var(--bg2)}
+
+  /* faq */
+  .faqs{margin-top:40px;max-width:820px}
+  details{border:1.5px solid var(--line2);border-radius:12px;background:var(--bg2);margin-bottom:12px;overflow:hidden}
+  summary{list-style:none;cursor:pointer;padding:18px 22px;font-size:17px;font-weight:700;
+          display:flex;justify-content:space-between;gap:14px;align-items:center}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";color:var(--accent);font-size:22px;font-weight:800;flex:none}
+  details[open] summary::after{content:"\2013"}
+  details .a{padding:2px 22px 20px;color:var(--muted);font-size:15.5px}
+  details .a b{color:var(--ink)}
+
+  footer{padding:50px 0 60px;color:var(--dim);font-size:14px;text-align:center}
+  footer .big{font-size:clamp(22px,3.5vw,32px);font-weight:800;color:var(--ink);margin-bottom:20px}
+  footer .big .em{color:var(--accent)}
+
+  /* progress timeline */
+  .timeline{margin-top:40px;max-width:720px}
+  .tl{display:flex;gap:20px;padding-bottom:30px;position:relative}
+  .tl:not(:last-child)::before{content:"";position:absolute;left:8px;top:22px;bottom:0;width:2px;background:var(--line2)}
+  .tl-dot{width:18px;height:18px;border-radius:50%;border:2px solid var(--line2);background:var(--bg);flex:none;margin-top:3px;position:relative;z-index:1}
+  .tl.done .tl-dot{background:var(--accent);border-color:var(--accent)}
+  .tl.now .tl-dot{border-color:var(--accent)}
+  .tl.now .tl-dot::after{content:"";position:absolute;inset:3px;border-radius:50%;background:var(--accent)}
+  .tl-status{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+  .tl.now .tl-status,.tl.next .tl-status{color:var(--accent)}
+  .tl-body h4{font-size:18px;font-weight:800;margin-top:5px}
+  .tl-body p{color:var(--muted);font-size:15px;margin-top:6px}
+
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+</style></head><body>
+
+<nav class="nav"><div class="wrap">
+  <div class="brand">ELEVATE<span class="dot">.</span>2026</div>
+  <div class="navlinks">
+    <a href="#what">What</a>
+    <a href="#why">Why</a>
+    <a href="#goals">Pillars</a>
+    <a href="#how">How</a>
+    <a href="#ideas">Ideas</a>
+    <a href="#event">Timeline</a>
+    <a href="#teams">Teams</a>
+    <a href="#faq">FAQ</a>
+  </div>
+  <a class="navcta" href="#teams">Register your team</a>
+</div></nav>
+
+<header class="hero"><div class="wrap reveal">
+  <span class="pill-new">Finale night · Friday 14 August 2026</span>
+  <h1>Score the elevation, <span class="em">not the agent</span>.</h1>
+  <p class="sub">ELEVATE is our company-wide AI hackathon — it runs across the week and ends in a finale on 14 Aug. Pick a real problem on your own project,
+     use AI to improve it, and show the difference with a simple before-and-after number.
+     We learn from each other, have a bit of fun, and lift our delivery as a company.</p>
+  <div class="facts">
+    <div class="fact"><span class="k">Finale</span> Fri 14 Aug · 5–9 PM</div>
+    <div class="fact"><span class="k">Where</span> 99x, Colombo</div>
+    <div class="fact"><span class="k">Who</span> ~30 teams of 3–4</div>
+  </div>
+  <div class="herocta">
+    <a class="btn primary" href="#how">See how it works</a>
+    <a class="btn ghost" href="#teams">Register your team</a>
+  </div>
+</div></header>
+
+<section id="what"><div class="wrap reveal">
+  <div class="eyebrow">What it is</div>
+  <h2>A hackathon about doing our real work <span class="em">better</span>.</h2>
+  <p class="lead">Take a real problem that keeps coming back on your project, use AI to make it
+     better, and show the difference with a number.</p>
+  <p class="lead"><b>It doesn't have to be an "agent."</b> Anything AI-powered counts, as long as it
+     genuinely helps: a code-review helper, a Claude skill you build, an AI test suite, a bug watcher,
+     or a support assistant. Pick what fits your project. And you stay in charge — a person always
+     decides what ships.</p>
+</div></section>
+
+<section id="why"><div class="wrap reveal">
+  <div class="eyebrow">Why we're doing it</div>
+  <h2>AI is the biggest shift in how we build software in years.</h2>
+  <p class="lead">ELEVATE is our chance to get ahead of it — as engineers and as a company. Sharpen
+     our skills, deliver more of what our customers care about, cut out the tedious repetitive work,
+     and enjoy figuring it out together.</p>
+  <p class="lead"><b>Better for the customer, better for the team.</b> The teams
+     that learn to work this way now will be the ones doing the most interesting work tomorrow.</p>
+</div></section>
+
+<section id="goals"><div class="wrap reveal">
+  <div class="eyebrow">The four North Star pillars</div>
+  <h2>Pick the North Star pillar you're improving.</h2>
+  <p class="lead">Every team chooses one of these to improve. It's the one thing you'll be judged on —
+     so it stays fair and focused.</p>
+  <div class="goals">
+    <div class="goal g1"><div class="ic">🚀</div><h3>Higher Pace</h3>
+      <p>Get things done and shipped faster — shorter waits, quicker releases.</p></div>
+    <div class="goal g2"><div class="ic">✅</div><h3>Better Quality</h3>
+      <p>Fewer bugs and less redoing work. Catch problems earlier.</p></div>
+    <div class="goal g3"><div class="ic">💎</div><h3>Extended Value</h3>
+      <p>Deliver more of what the customer actually cares about.</p></div>
+    <div class="goal g4"><div class="ic">🌱</div><h3>A Team That Thrives</h3>
+      <p>Less boring, repetitive work — a happier, more focused team.</p></div>
+  </div>
+  <div class="callout"><b>Tip:</b> pick one pillar to focus on, two at most. Genuinely improving one thing
+     beats spreading yourself thin across all four.</div>
+</div></section>
+
+<section id="how"><div class="wrap reveal">
+  <div class="eyebrow">How it works</div>
+  <h2>Four simple steps.</h2>
+  <div class="steps">
+    <div class="step"><div class="n">1</div><h3>Find a real pain</h3>
+      <p>Something on your project that <b>keeps costing you time</b> — the slow task everyone
+         dreads.</p></div>
+    <div class="step"><div class="n">2</div><h3>Pick the pillar</h3>
+      <p>Decide which of the <b>four pillars</b> fixing it improves.</p></div>
+    <div class="step"><div class="n">3</div><h3>Use AI to fix it</h3>
+      <p>Build the AI improvement that fits — <b>a person still approves what ships</b>.</p></div>
+    <div class="step"><div class="n">4</div><h3>Measure it</h3>
+      <p>A <b>before</b> number this week, an <b>after</b> number with AI next week. Bring both.</p></div>
+  </div>
+  <div class="callout"><b>About the number:</b> pick one thing you can measure in two weeks.
+     No live customer by event day? A careful estimate is fine — just show your working. What doesn't
+     land is <i>"it made us faster"</i> with nothing to back it up.</div>
+</div></section>
+
+<section id="ideas"><div class="wrap reveal">
+  <div class="eyebrow">Ideas to steal</div>
+  <h2>Not sure where to start? Borrow one of these.</h2>
+  <p class="lead">These are the kinds of AI improvements teams already use across a project's lifecycle.
+     Grab the one that hurts your project most — or invent your own.</p>
+  <div class="ideas">
+    <div class="idea"><div class="stage">Planning</div><h3>Tickets &amp; backlog</h3>
+      <ul><li><b>Ticket triage</b> — sort and route incoming work</li>
+          <li><b>Backlog clean-up</b> — find duplicates and stale items</li></ul></div>
+    <div class="idea"><div class="stage">Building</div><h3>Writing code</h3>
+      <ul><li><b>AI pair-coding</b> — you steer, it does the typing</li>
+          <li><b>Ticket-to-PR helper</b> — drafts a pull request for review</li>
+          <li><b>Auto documentation</b> — keeps docs in step with the code</li></ul></div>
+    <div class="idea"><div class="stage">Testing</div><h3>Proving it works</h3>
+      <ul><li><b>AI code review</b> — a first pass before a human looks</li>
+          <li><b>AI test suite</b> — writes and maintains the tests</li></ul></div>
+    <div class="idea"><div class="stage">Shipping &amp; running</div><h3>Keeping it healthy</h3>
+      <ul><li><b>Dependency upgrades</b> — safe updates, on autopilot</li>
+          <li><b>Incident first-response</b> — early diagnosis while you catch up</li>
+          <li><b>Bug watcher</b> — spots issues before customers do</li></ul></div>
+    <div class="idea"><div class="stage">Support</div><h3>Helping customers</h3>
+      <ul><li><b>Support assistant</b> — answers the easy tickets, escalates the rest</li></ul></div>
+    <div class="idea"><div class="stage">Feedback</div><h3>Learning from users</h3>
+      <ul><li><b>Feedback summariser</b> — turns tickets, reviews and NPS into clear themes</li></ul></div>
+  </div>
+</div></section>
+
+<section id="event"><div class="wrap reveal">
+  <div class="eyebrow">The event</div>
+  <h2>Underway now — building toward the finale.</h2>
+  <p class="lead">ELEVATE runs across the week and comes together for one big finale evening.
+     Here's where things stand.</p>
+  <div class="timeline">
+    <div class="tl done"><span class="tl-dot"></span><div class="tl-body">
+      <div class="tl-status">Done</div><h4>Ramp-up</h4>
+      <p>Pre-recorded expert talks to get every team started.</p></div></div>
+    <div class="tl now"><span class="tl-dot"></span><div class="tl-body">
+      <div class="tl-status">Happening now</div><h4>Pre-finale week</h4>
+      <p>Teams build on their real projects, with mentoring and judging rounds running through the week.</p></div></div>
+    <div class="tl next"><span class="tl-dot"></span><div class="tl-body">
+      <div class="tl-status">Fri 14 Aug · 5–9 PM</div><h4>The finale</h4>
+      <p>Everyone together at 99x, 349 Colombo Main Rd, Colombo 00300 — top teams present, winners
+         are announced, and dinner's on the floor.</p></div></div>
+  </div>
+
+  <h2 style="font-size:clamp(22px,3vw,28px);margin-top:60px">What the judges look for</h2>
+  <p class="lead">Simple and fair — it all comes back to a real problem and a real improvement.</p>
+  <div class="judge">
+    <div class="jc"><div class="num">1</div><h4>The problem</h4><p>Is it real and worth solving?</p></div>
+    <div class="jc"><div class="num">2</div><h4>The pillar</h4><p>Which pillar it improves, chosen up front.</p></div>
+    <div class="jc"><div class="num">3</div><h4>The AI fix</h4><p>What you built, with a person in charge of what ships.</p></div>
+    <div class="jc"><div class="num">4</div><h4>The proof</h4><p>A before-and-after number that shows it moved.</p></div>
+    <div class="jc"><div class="num">5</div><h4>Real project</h4><p>It ran on your actual project, not a mock-up.</p></div>
+    <div class="jc"><div class="num">6</div><h4>The potential</h4><p>Could it grow into something the team keeps using?</p></div>
+  </div>
+</div></section>
+
+<section id="teams"><div class="wrap reveal">
+  <div class="eyebrow">Teams</div>
+  <h2>Register your team.</h2>
+  <div class="stats">
+    <div class="stat"><div class="v">30+</div><div class="l">teams taking part</div></div>
+    <div class="stat"><div class="v">3–4</div><div class="l">people per team</div></div>
+  </div>
+  <p class="lead" style="margin-top:36px">Two ways to sign up — pick whichever is easier for your team:</p>
+  <div class="reg">
+    <div class="regcard">
+      <div class="k">Easiest</div>
+      <h3>Fill in the form</h3>
+      <p>A quick Microsoft Form — team name, lead and members. Done in a minute.</p>
+      <a class="btn primary" href="https://forms.cloud.microsoft/pages/responsepage.aspx?id=K7gH1v9rDUCvZI56suigBJaVsYtqlo9DmHA8Anr6E8tUM0dJRFczNDA0S1ZDMjBJRjAxMlA1WTMwMS4u&route=shorturl">Open the form →</a>
+    </div>
+    <div class="regcard">
+      <div class="k">For the GitHub crowd</div>
+      <h3>Edit TEAMS.md</h3>
+      <p>Fork the repo, find your team's section, add your details, and open a pull request.</p>
+      <a class="btn ghost" href="https://github.com/99x-Projects/elevate-2026/blob/main/TEAMS.md">Open TEAMS.md →</a>
+    </div>
+  </div>
+  <div class="teamgrid">
+    <span class="tteam">Adra Balancer</span><span class="tteam">Adra Journal Entry</span>
+    <span class="tteam">Adra Matcher</span><span class="tteam">Adra Platform</span>
+    <span class="tteam">Adra Task Manager</span><span class="tteam">Agentic AI Platform</span>
+    <span class="tteam">Amili ARM · Pay · AutoCollect</span><span class="tteam">Amili EDI</span>
+    <span class="tteam">Amili MyPage · Customer Portal</span><span class="tteam">Amili Send</span>
+    <span class="tteam">Arktika · Data Platform · Gture-Ditio</span><span class="tteam">BagID</span>
+    <span class="tteam">Boligmappa-Tilde · AreaSim</span><span class="tteam">BUS</span>
+    <span class="tteam">Cantor · Kimaa</span><span class="tteam">CarCare</span>
+    <span class="tteam">Compello Process</span><span class="tteam">Envo · Sebastian AS</span>
+    <span class="tteam">Friskus · SosialT · No Isolation</span><span class="tteam">Hatteland</span>
+    <span class="tteam">NRC</span><span class="tteam">Parkly</span>
+    <span class="tteam">Plaato · Grunt · Kahoot · My1min</span><span class="tteam">Raintree Inc.</span>
+    <span class="tteam">Solwr OMS</span><span class="tteam">SuperOffice AI</span>
+    <span class="tteam">SuperOffice Dev</span><span class="tteam">SuperOffice QA</span>
+    <span class="tteam">THEPrep-AI · AI Hub · Sharefox-AI</span><span class="tteam">UpNorway</span>
+    <span class="tteam">VardaCare</span><span class="tteam">Govtech</span>
+  </div>
+</div></section>
+
+<section id="faq" style="border-bottom:none"><div class="wrap reveal">
+  <div class="eyebrow">FAQ</div>
+  <h2>Quick answers.</h2>
+  <div class="faqs">
+    <details open><summary>Do I have to build an "agent"?</summary>
+      <div class="a">No. Any AI improvement counts — a PR review helper, a Claude skill, an AI test
+         suite, a bug watcher, and so on. Pick whatever genuinely helps your project.</div></details>
+    <details><summary>Do we need a live customer to score well?</summary>
+      <div class="a">No. If you can't reach production in two weeks, a careful <b>estimate</b> is fine —
+         just show the working behind it.</div></details>
+    <details><summary>What do we bring on the night?</summary>
+      <div class="a">One improvement running on your real project, the goal you picked, and <b>two
+         numbers</b>: a before and an after (or estimated) result.</div></details>
+    <details><summary>We don't know where to start.</summary>
+      <div class="a">Walk your project stage by stage and ask what keeps costing time. The
+         <a href="#ideas">Ideas to steal</a> section is a menu of common starting points.</div></details>
+    <details><summary>What happens to the winning teams?</summary>
+      <div class="a">The top teams share what they built with everyone, and the strongest ideas can grow
+         into things the team — and our customers — actually keep using.</div></details>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="big">Let's <span class="em">elevate</span> — together.</div>
+  ELEVATE 2026 · built by the organizing team ·
+  <a href="https://github.com/99x-Projects/elevate-2026">github.com/99x-Projects/elevate-2026</a>
+</div></footer>
+
+<script>
+(function(){
+  var links = Array.prototype.slice.call(document.querySelectorAll('.navlinks a'));
+  var sections = links.map(function(a){ return document.getElementById(a.getAttribute('href').slice(1)); });
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        var id = e.target.id;
+        links.forEach(function(a){ a.classList.toggle('active', a.getAttribute('href') === '#'+id); });
+      }
+    });
+  }, {rootMargin:'-45% 0px -50% 0px'});
+  sections.forEach(function(s){ if(s) obs.observe(s); });
+
+  var rev = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); rev.unobserve(e.target); } });
+  }, {rootMargin:'0px 0px -10% 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){ rev.observe(el); });
+})();
+</script>
+</body></html>
