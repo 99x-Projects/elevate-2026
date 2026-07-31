@@ -191,7 +191,7 @@ Keep your section's heading and position in the list as-is — just fill in the 
   - Madhawa
   - Skenos
 
-## 23. Plaato · Grunt · Norwegian SubSea · Kahoot · My1min
+## 23. Plaato · Grunt · Norwegian SubSea · Kahoot
 
 - **Team Name:** _TBD_
 - **Team Lead:** _TBD_
@@ -259,10 +259,19 @@ Keep your section's heading and position in the list as-is — just fill in the 
 - **Participants:**
   - Zameer
 
- ## 32. Govtech
+## 32. Govtech
 
 - **Team Name:** Govtech
 - **Team Lead:** Chinthaka D
 - **Participants:**
   - Chinthaka D
 
+## 33. My1Min
+
+- **Team Name:** My1Min
+- **Team Lead:** Niranga De Silva
+- **Participants:**
+  - Niranga De Silva
+  - Isira Wattage
+  - Pradeesha Hettiarachchi
+  - Nipuna Navodya
