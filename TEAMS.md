@@ -116,10 +116,13 @@ Keep your section's heading and position in the list as-is — just fill in the 
 
 ## 13. Boligmappa-Tilde · AreaSim
 
-- **Team Name:** _TBD_
-- **Team Lead:** _TBD_
+- **Team Name:** BoligSim
+- **Team Lead:** Kushan Rathnayaka
 - **Participants:**
-  - _TBD_
+  - Sudath Thenuwara
+  - Avishka Gamage
+  - Kushan Rathnayaka
+  - Thiruni Jayasiriwardena
 
 ## 14. BUS
 
