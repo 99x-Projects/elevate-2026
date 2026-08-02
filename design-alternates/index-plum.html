@@ -3,128 +3,155 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>ELEVATE 2026 — The Hub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500&display=swap" rel="stylesheet">
 <style>
   *{margin:0;padding:0;box-sizing:border-box}
   :root{
-    --bg:#F3F1EA; --surface:#FFFFFF; --ink:#232320; --muted:#57554E; --dim:#8B8980;
-    --line:#E0DBCF; --line2:#CFC9BB; --accent:#2E6470; --accent-soft:#E2ECEC;
-    --deep:#1E4750; --deep-ink:#EEF2F1; --deep-muted:#A7C1C4; --deep-line:#356069;
+    --bg:#F6F3F7; --surface:#FFFFFF; --ink:#251E29; --muted:#5C5364; --dim:#8E8798;
+    --line:#E8E1EC; --line2:#D8CFDF; --accent:#8A4E86; --accent-hover:#6E3B6B; --accent-soft:#F1E8F2;
+    --deep:#3A2340; --deep-ink:#F3ECF4; --deep-muted:#C6AECB; --deep-line:#553459;
+    --serif:"Fraunces",Georgia,serif;
+    --shadow:0 1px 2px rgba(58,35,64,.05),0 6px 24px rgba(58,35,64,.07);
   }
   html{scroll-behavior:smooth}
   body{background:var(--bg);color:var(--ink);line-height:1.7;font-weight:400;
-       font-family:"Inter","Avenir Next","Segoe UI","Helvetica Neue",system-ui,sans-serif;
-       -webkit-font-smoothing:antialiased}
+       font-family:"Inter","Segoe UI",system-ui,sans-serif;-webkit-font-smoothing:antialiased;
+       font-feature-settings:"cv02","cv03","cv04","ss01"}
   a{color:var(--accent);text-decoration:none}
   a:hover{text-decoration:underline}
-  .wrap{max-width:1000px;margin:0 auto;padding:0 clamp(24px,6vw,48px)}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 clamp(24px,6vw,52px)}
   .em{color:var(--accent)}
 
   /* sticky nav */
-  .nav{position:sticky;top:0;z-index:50;background:rgba(247,246,243,.82);
-       backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-  .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px;gap:20px}
-  .brand{font-weight:600;letter-spacing:.14em;font-size:14px;text-transform:uppercase;white-space:nowrap}
+  .nav{position:sticky;top:0;z-index:50;background:rgba(243,241,234,.85);
+       backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:70px;gap:20px}
+  .brand{display:flex;align-items:center;gap:11px;white-space:nowrap}
+  .brand svg{display:block}
+  .brand span{font-weight:600;letter-spacing:.14em;font-size:14px;text-transform:uppercase}
   .navlinks{display:flex;gap:2px;flex-wrap:wrap}
-  .navlinks a{color:var(--muted);font-size:14px;font-weight:400;padding:8px 13px;border-radius:8px}
+  .navlinks a{color:var(--muted);font-size:14px;font-weight:400;padding:8px 13px;border-radius:8px;transition:color .15s}
   .navlinks a:hover{color:var(--ink);text-decoration:none}
-  .navlinks a.active{color:var(--accent)}
+  .navlinks a.active{color:var(--accent);font-weight:500}
   .navcta{border:1px solid var(--accent);color:var(--accent) !important;font-weight:500;
-          padding:9px 18px;border-radius:999px;font-size:14px;white-space:nowrap}
-  .navcta:hover{text-decoration:none;background:var(--accent-soft)}
-  @media(max-width:900px){.navlinks{display:none}}
+          padding:9px 18px;border-radius:999px;font-size:14px;white-space:nowrap;transition:background .15s}
+  .navcta:hover{text-decoration:none;background:var(--accent);color:#fff !important}
+  @media(max-width:940px){.navlinks{display:none}}
 
   /* section rhythm */
-  section{padding:clamp(64px,10vw,128px) 0;border-bottom:1px solid var(--line)}
-  .eyebrow{color:var(--accent);font-size:12px;font-weight:500;letter-spacing:.24em;
-           text-transform:uppercase;margin-bottom:20px}
-  h2{font-size:clamp(27px,4vw,40px);font-weight:500;letter-spacing:-.015em;line-height:1.2}
-  .lead{color:var(--muted);font-size:clamp(17px,1.7vw,19px);margin-top:22px;max-width:680px;font-weight:400}
-  .lead b{color:var(--ink);font-weight:500}
+  section{padding:clamp(68px,10vw,132px) 0;border-bottom:1px solid var(--line)}
+  .eyebrow{display:flex;align-items:center;gap:12px;color:var(--accent);font-size:12px;font-weight:600;
+           letter-spacing:.2em;text-transform:uppercase;margin-bottom:22px}
+  .eyebrow .idx{font-variant-numeric:tabular-nums;color:var(--dim);font-weight:500}
+  .eyebrow .idx::after{content:"";display:inline-block;width:22px;height:1px;background:var(--line2);
+           vertical-align:middle;margin-left:12px}
+  h2{font-family:var(--serif);font-size:clamp(29px,4.2vw,44px);font-weight:500;letter-spacing:-.01em;line-height:1.18}
+  .lead{color:var(--muted);font-size:clamp(17px,1.7vw,19px);margin-top:22px;max-width:680px}
+  .lead b{color:var(--ink);font-weight:600}
 
   /* hero */
-  .hero{padding:clamp(84px,13vw,150px) 0 clamp(64px,10vw,110px);border-bottom:1px solid var(--line)}
-  .hero h1{font-size:clamp(38px,6.5vw,68px);font-weight:500;letter-spacing:-.025em;line-height:1.08;max-width:880px}
-  .hero .sub{color:var(--muted);font-size:clamp(18px,2.1vw,22px);margin-top:30px;max-width:660px;font-weight:400}
-  .hero .sub b{color:var(--ink);font-weight:500}
-  .facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:40px}
-  .fact{display:flex;align-items:center;gap:9px;background:var(--surface);border:1px solid var(--line);
-        border-radius:999px;padding:9px 18px;font-size:14.5px;font-weight:400;color:var(--muted)}
-  .fact .k{color:var(--ink);font-weight:500}
+  .hero{padding:clamp(88px,13vw,156px) 0 clamp(66px,10vw,116px);border-bottom:1px solid var(--line)}
+  .hero h1{font-family:var(--serif);font-size:clamp(40px,6.6vw,74px);font-weight:500;letter-spacing:-.02em;
+           line-height:1.06;max-width:900px}
+  .hero .sub{color:var(--muted);font-size:clamp(18px,2.1vw,22px);margin-top:30px;max-width:660px}
+  .hero .sub b{color:var(--ink);font-weight:600}
+  .facts{display:flex;flex-wrap:wrap;gap:0;margin-top:44px;border:1px solid var(--line);border-radius:14px;
+         overflow:hidden;background:var(--surface);width:fit-content;box-shadow:var(--shadow)}
+  .fact{display:flex;flex-direction:column;gap:3px;padding:16px 26px;border-right:1px solid var(--line)}
+  .fact:last-child{border-right:none}
+  .fact .k{color:var(--dim);font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+  .fact .v{color:var(--ink);font-size:16px;font-weight:500}
+  @media(max-width:560px){.facts{width:100%}.fact{flex:1;min-width:120px}}
   .herocta{margin-top:40px;display:flex;gap:12px;flex-wrap:wrap}
-  .btn{display:inline-block;font-weight:500;font-size:15px;padding:13px 28px;border-radius:999px;transition:background .15s}
+  .btn{display:inline-block;font-weight:500;font-size:15px;padding:14px 30px;border-radius:999px;transition:background .15s,border-color .15s}
   .btn.primary{background:var(--accent);color:#fff}
-  .btn.primary:hover{text-decoration:none;background:#1E4750}
+  .btn.primary:hover{text-decoration:none;background:var(--accent-hover)}
   .btn.ghost{border:1px solid var(--line2);color:var(--ink)}
   .btn.ghost:hover{text-decoration:none;border-color:var(--accent);color:var(--accent)}
-  .pill-new{display:inline-block;background:var(--accent-soft);color:var(--accent);
-            font-size:13px;font-weight:500;letter-spacing:.02em;padding:7px 16px;border-radius:999px;margin-bottom:30px}
+  .pill-new{display:inline-flex;align-items:center;gap:8px;background:var(--accent-soft);color:var(--accent);
+            font-size:13px;font-weight:500;padding:7px 16px;border-radius:999px;margin-bottom:32px}
+  .pill-new::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent)}
 
   /* goals / pillars */
-  .goals{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;margin-top:48px;
-         background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden}
-  .goal{background:var(--surface);padding:32px 30px 36px}
-  .goal .gk{font-size:12px;font-weight:500;letter-spacing:.14em;color:var(--dim);text-transform:uppercase}
-  .goal h3{font-size:20px;font-weight:500;margin-top:14px;letter-spacing:-.01em}
+  .goals{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;margin-top:50px;
+         background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
+  .goal{background:var(--surface);padding:34px 30px 38px;transition:background .2s}
+  .goal:hover{background:#FBF7FC}
+  .goal .gk{font-size:12px;font-weight:600;letter-spacing:.14em;color:var(--dim);text-transform:uppercase;font-variant-numeric:tabular-nums}
+  .goal h3{font-size:20px;font-weight:600;margin-top:14px;letter-spacing:-.01em}
   .goal p{color:var(--muted);font-size:15.5px;margin-top:10px}
-  .callout{border-left:2px solid var(--accent);padding:6px 0 6px 22px;margin-top:34px;
+  .callout{border-left:2px solid var(--accent);padding:8px 0 8px 24px;margin-top:36px;
            color:var(--muted);font-size:16px;max-width:680px}
-  .callout b{color:var(--ink);font-weight:500}
+  .callout b{color:var(--ink);font-weight:600}
 
   /* steps */
-  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:36px 30px;margin-top:52px}
-  .step .n{width:44px;height:44px;border-radius:50%;border:1px solid var(--accent);color:var(--accent);
-           display:flex;align-items:center;justify-content:center;font-weight:500;font-size:17px}
-  .step h3{font-size:19px;font-weight:500;margin-top:20px;letter-spacing:-.01em}
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:40px 32px;margin-top:54px}
+  .step .n{width:46px;height:46px;border-radius:50%;border:1px solid var(--accent);color:var(--accent);
+           display:flex;align-items:center;justify-content:center;font-weight:500;font-size:17px;font-family:var(--serif)}
+  .step h3{font-size:19px;font-weight:600;margin-top:22px;letter-spacing:-.01em}
   .step p{color:var(--muted);font-size:15px;margin-top:10px}
-  .step p b{color:var(--ink);font-weight:500}
+  .step p b{color:var(--ink);font-weight:600}
 
   /* ideas */
-  .ideas{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1px;margin-top:52px;
-         background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden}
-  .idea{background:var(--surface);padding:26px 28px}
-  .idea .stage{font-size:11.5px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--dim)}
-  .idea h3{font-size:18px;font-weight:500;margin-top:6px;letter-spacing:-.01em}
+  .ideas{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1px;margin-top:54px;
+         background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
+  .idea{background:var(--surface);padding:28px 30px;transition:background .2s}
+  .idea:hover{background:#FBF7FC}
+  .idea .stage{font-size:11.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--dim)}
+  .idea h3{font-size:18px;font-weight:600;margin-top:6px;letter-spacing:-.01em}
   .idea ul{margin:14px 0 0;list-style:none}
   .idea li{margin:9px 0;color:var(--muted);font-size:15px;padding-left:16px;position:relative}
   .idea li::before{content:"";position:absolute;left:0;top:11px;width:5px;height:5px;border-radius:50%;background:var(--accent)}
-  .idea li b{color:var(--ink);font-weight:500}
+  .idea li b{color:var(--ink);font-weight:600}
+
+  /* bold dark focal section */
+  section.dark{background:var(--deep);border-bottom:1px solid var(--deep-line)}
+  section.dark .eyebrow{color:var(--deep-muted)}
+  section.dark .eyebrow .idx{color:#6E959B}
+  section.dark .eyebrow .idx::after{background:var(--deep-line)}
+  section.dark h2{color:var(--deep-ink)}
+  section.dark .lead{color:var(--deep-muted)}
+  section.dark .lead b{color:#fff}
+  section.dark .em{color:#E3A6C6}
 
   /* event flow */
-  .flow{display:flex;flex-wrap:wrap;gap:1px;margin-top:44px;background:var(--line);
-        border:1px solid var(--line);border-radius:16px;overflow:hidden}
-  .fstep{flex:1;min-width:150px;background:var(--surface);padding:22px 24px}
-  .fstep .t{font-size:13px;font-weight:500;color:var(--accent)}
-  .fstep h4{font-size:16px;font-weight:500;margin-top:6px}
+  .flow{display:flex;flex-wrap:wrap;gap:1px;margin-top:46px;background:var(--line);
+        border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
+  .fstep{flex:1;min-width:150px;background:var(--surface);padding:24px 26px}
+  .fstep .t{font-size:13px;font-weight:600;color:var(--accent);font-variant-numeric:tabular-nums}
+  .fstep h4{font-size:16px;font-weight:600;margin-top:6px}
   .fstep p{color:var(--dim);font-size:13.5px;margin-top:5px}
-  .when-where{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:44px}
-  .ww{border:1px solid var(--line);border-radius:16px;padding:30px;background:var(--surface)}
-  .ww .k{color:var(--accent);font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase}
-  .ww h3{font-size:22px;font-weight:500;margin-top:10px;letter-spacing:-.01em}
+  .when-where{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:46px}
+  .ww{border:1px solid var(--line);border-radius:16px;padding:32px;background:var(--surface);box-shadow:var(--shadow)}
+  .ww .k{color:var(--accent);font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+  .ww h3{font-size:22px;font-weight:600;margin-top:10px;letter-spacing:-.01em}
   .ww p{color:var(--muted);font-size:15.5px;margin-top:10px}
   .ww.hero-card{border-color:var(--accent);background:var(--accent-soft)}
 
   /* judging simple */
-  .judge{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:34px 26px;margin-top:44px}
-  .jc .num{color:var(--accent);font-weight:500;font-size:14px}
-  .jc h4{font-size:16px;font-weight:500;margin-top:8px;letter-spacing:-.01em}
+  .judge{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:36px 28px;margin-top:46px}
+  .jc .num{color:var(--accent);font-weight:500;font-size:15px;font-family:var(--serif);font-variant-numeric:tabular-nums}
+  .jc h4{font-size:16px;font-weight:600;margin-top:8px;letter-spacing:-.01em}
   .jc p{color:var(--dim);font-size:14px;margin-top:6px}
 
   /* teams */
-  .stats{display:flex;gap:14px;flex-wrap:wrap;margin-top:44px}
-  .stat{border:1px solid var(--line);border-radius:16px;padding:22px 30px;background:var(--surface);min-width:150px}
-  .stat .v{font-size:36px;font-weight:500;color:var(--ink);letter-spacing:-.02em}
+  .stats{display:flex;gap:14px;flex-wrap:wrap;margin-top:46px}
+  .stat{border:1px solid var(--line);border-radius:16px;padding:24px 32px;background:var(--surface);min-width:150px;box-shadow:var(--shadow)}
+  .stat .v{font-size:38px;font-weight:500;color:var(--ink);letter-spacing:-.02em;font-family:var(--serif)}
   .stat .l{font-size:14px;color:var(--muted);margin-top:2px}
-  .reg{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:26px}
-  .regcard{border:1px solid var(--line);border-radius:16px;padding:30px;background:var(--surface);
-           display:flex;flex-direction:column;align-items:flex-start}
-  .regcard .k{color:var(--accent);font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase}
-  .regcard h3{font-size:20px;font-weight:500;margin-top:10px;letter-spacing:-.01em}
-  .regcard p{color:var(--muted);font-size:15px;margin:12px 0 22px;flex:1}
-  .teamgrid{display:flex;flex-wrap:wrap;gap:8px;margin-top:40px}
+  .reg{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:28px}
+  .regcard{border:1px solid var(--line);border-radius:16px;padding:32px;background:var(--surface);
+           display:flex;flex-direction:column;align-items:flex-start;box-shadow:var(--shadow)}
+  .regcard .k{color:var(--accent);font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+  .regcard h3{font-size:20px;font-weight:600;margin-top:10px;letter-spacing:-.01em}
+  .regcard p{color:var(--muted);font-size:15px;margin:12px 0 24px;flex:1}
+  .teamgrid{display:flex;flex-wrap:wrap;gap:8px;margin-top:42px}
   .tteam{border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-size:14px;color:var(--muted);background:var(--surface)}
 
   /* faq */
-  .faqs{margin-top:44px;max-width:800px}
+  .faqs{margin-top:46px;max-width:800px}
   details{border-bottom:1px solid var(--line)}
   summary{list-style:none;cursor:pointer;padding:22px 0;font-size:17px;font-weight:500;
           display:flex;justify-content:space-between;gap:14px;align-items:center;letter-spacing:-.01em}
@@ -132,31 +159,31 @@
   summary::after{content:"+";color:var(--accent);font-size:22px;font-weight:400;flex:none}
   details[open] summary::after{content:"\2013"}
   details .a{padding:0 0 24px;color:var(--muted);font-size:15.5px;max-width:720px}
-  details .a b{color:var(--ink);font-weight:500}
+  details .a b{color:var(--ink);font-weight:600}
 
-  footer{padding:72px 0 84px;color:var(--dim);font-size:14px;text-align:center}
-  footer .big{font-size:clamp(24px,3.5vw,34px);font-weight:500;color:var(--ink);margin-bottom:24px;letter-spacing:-.02em}
-  footer .big .em{color:var(--accent)}
-
-  /* bold dark focal section */
-  section.dark{background:var(--deep);border-bottom:1px solid var(--deep-line)}
-  section.dark .eyebrow{color:var(--deep-muted)}
-  section.dark h2{color:var(--deep-ink)}
-  section.dark .lead{color:var(--deep-muted)}
-  section.dark .lead b{color:#fff}
-  section.dark .em{color:#8FD3D6}
+  /* footer */
+  footer{background:var(--deep);color:var(--deep-muted);padding:clamp(56px,8vw,88px) 0 48px}
+  .fgrid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:36px;padding-bottom:44px;border-bottom:1px solid var(--deep-line)}
+  @media(max-width:720px){.fgrid{grid-template-columns:1fr;gap:28px}}
+  .fgrid .lead-f{font-family:var(--serif);font-size:clamp(22px,3vw,30px);font-weight:500;color:#fff;letter-spacing:-.01em;max-width:360px}
+  .fgrid .lead-f .em{color:#E3A6C6}
+  .fcol h5{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#6E959B;margin-bottom:16px}
+  .fcol a{display:block;color:var(--deep-ink);font-size:15px;margin-bottom:11px}
+  .fcol a:hover{color:#E3A6C6}
+  .fbase{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:26px;font-size:13.5px;color:#6E959B}
+  .fbase a{color:#6E959B}
 
   /* progress timeline */
-  .timeline{margin-top:44px;max-width:720px}
-  .tl{display:flex;gap:20px;padding-bottom:30px;position:relative}
+  .timeline{margin-top:46px;max-width:720px}
+  .tl{display:flex;gap:20px;padding-bottom:32px;position:relative}
   .tl:not(:last-child)::before{content:"";position:absolute;left:8px;top:22px;bottom:0;width:2px;background:var(--line2)}
   .tl-dot{width:18px;height:18px;border-radius:50%;border:2px solid var(--line2);background:var(--bg);flex:none;margin-top:3px;position:relative;z-index:1}
   .tl.done .tl-dot{background:var(--accent);border-color:var(--accent)}
   .tl.now .tl-dot{border-color:var(--accent)}
   .tl.now .tl-dot::after{content:"";position:absolute;inset:3px;border-radius:50%;background:var(--accent)}
-  .tl-status{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+  .tl-status{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
   .tl.now .tl-status,.tl.next .tl-status{color:var(--accent)}
-  .tl-body h4{font-size:18px;font-weight:500;margin-top:5px}
+  .tl-body h4{font-size:18px;font-weight:600;margin-top:5px;letter-spacing:-.01em}
   .tl-body p{color:var(--muted);font-size:15px;margin-top:6px}
 
   .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
@@ -164,7 +191,12 @@
 </style></head><body>
 
 <nav class="nav"><div class="wrap">
-  <div class="brand">ELEVATE 2026</div>
+  <div class="brand">
+    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+      <path d="M11 2 L19 10 L15 10 L15 20 L7 20 L7 10 L3 10 Z" fill="#8A4E86"/>
+    </svg>
+    <span>ELEVATE 2026</span>
+  </div>
   <div class="navlinks">
     <a href="#what">What</a>
     <a href="#why">Why</a>
@@ -181,13 +213,14 @@
 <header class="hero"><div class="wrap reveal">
   <span class="pill-new">Finale night · Friday 14 August 2026</span>
   <h1>Score the elevation, <span class="em">not the agent</span>.</h1>
-  <p class="sub">ELEVATE is our company-wide AI hackathon — it runs across the week and ends in a finale on 14 Aug. Pick a real problem on your own project,
-     use AI to improve it, and show the difference with a simple before-and-after number.
+  <p class="sub">ELEVATE is our next AI hackathon, back for another round, and this year it's about improving on our
+     North Star pillars. Pick a real problem on your project, use AI to improve it, and show the difference
+     with a simple before-and-after number. It runs across the week and wraps up with the finale on 14 Aug.
      We learn from each other, have a bit of fun, and lift our delivery as a company.</p>
   <div class="facts">
-    <div class="fact"><span class="k">Finale</span> Fri 14 Aug · 5–9 PM</div>
-    <div class="fact"><span class="k">Where</span> 99x, Colombo</div>
-    <div class="fact"><span class="k">Who</span> ~30 teams of 3–4</div>
+    <div class="fact"><span class="k">Finale</span><span class="v">Fri 14 Aug · 5–9 PM</span></div>
+    <div class="fact"><span class="k">Where</span><span class="v">99x, Colombo</span></div>
+    <div class="fact"><span class="k">Who</span><span class="v">~30 teams of 3–4</span></div>
   </div>
   <div class="herocta">
     <a class="btn primary" href="#how">See how it works</a>
@@ -196,7 +229,7 @@
 </div></header>
 
 <section id="what"><div class="wrap reveal">
-  <div class="eyebrow">What it is</div>
+  <div class="eyebrow"><span class="idx">01</span>What it is</div>
   <h2>A hackathon about doing our real work <span class="em">better</span>.</h2>
   <p class="lead">Take a real problem that keeps coming back on your project, use AI to make it
      better, and show the difference with a number.</p>
@@ -206,7 +239,7 @@
 </div></section>
 
 <section id="why" class="dark"><div class="wrap reveal">
-  <div class="eyebrow">Why we're doing it</div>
+  <div class="eyebrow"><span class="idx">02</span>Why we're doing it</div>
   <h2>AI is the biggest shift in how we build software in years.</h2>
   <p class="lead">ELEVATE is our chance to get ahead of it — as engineers and as a company. Sharpen
      our skills, deliver more of what our customers care about, cut out the tedious repetitive work,
@@ -216,7 +249,7 @@
 </div></section>
 
 <section id="goals"><div class="wrap reveal">
-  <div class="eyebrow">The four North Star pillars</div>
+  <div class="eyebrow"><span class="idx">03</span>The four North Star pillars</div>
   <h2>Pick the North Star pillar you're improving.</h2>
   <p class="lead">Every team chooses one of these to improve. It's the one thing you'll be judged on —
      so it stays fair and focused.</p>
@@ -235,7 +268,7 @@
 </div></section>
 
 <section id="how"><div class="wrap reveal">
-  <div class="eyebrow">How it works</div>
+  <div class="eyebrow"><span class="idx">04</span>How it works</div>
   <h2>Four simple steps.</h2>
   <div class="steps">
     <div class="step"><div class="n">1</div><h3>Find a real pain</h3>
@@ -254,7 +287,7 @@
 </div></section>
 
 <section id="ideas"><div class="wrap reveal">
-  <div class="eyebrow">Ideas to steal</div>
+  <div class="eyebrow"><span class="idx">05</span>Ideas to steal</div>
   <h2>Not sure where to start? Borrow one of these.</h2>
   <p class="lead">These are the kinds of AI improvements teams already use across a project's lifecycle.
      Grab the one that hurts your project most — or invent your own.</p>
@@ -281,7 +314,7 @@
 </div></section>
 
 <section id="event"><div class="wrap reveal">
-  <div class="eyebrow">The event</div>
+  <div class="eyebrow"><span class="idx">06</span>The event</div>
   <h2>Underway now — building toward the finale.</h2>
   <p class="lead">ELEVATE runs across the week and comes together for one big finale evening.
      Here's where things stand.</p>
@@ -298,7 +331,7 @@
          are announced, and dinner's on the floor.</p></div></div>
   </div>
 
-  <h2 style="font-size:clamp(22px,3vw,28px);margin-top:64px">What the judges look for</h2>
+  <h2 style="font-size:clamp(22px,3vw,28px);margin-top:66px">What the judges look for</h2>
   <p class="lead">Simple and fair — it all comes back to a real problem and a real improvement.</p>
   <div class="judge">
     <div class="jc"><div class="num">01</div><h4>The problem</h4><p>Is it real and worth solving?</p></div>
@@ -311,7 +344,7 @@
 </div></section>
 
 <section id="teams"><div class="wrap reveal">
-  <div class="eyebrow">Teams</div>
+  <div class="eyebrow"><span class="idx">07</span>Teams</div>
   <h2>Register your team.</h2>
   <div class="stats">
     <div class="stat"><div class="v">30+</div><div class="l">teams taking part</div></div>
@@ -352,8 +385,8 @@
   </div>
 </div></section>
 
-<section id="faq" style="border-bottom:none"><div class="wrap reveal">
-  <div class="eyebrow">FAQ</div>
+<section id="faq"><div class="wrap reveal">
+  <div class="eyebrow"><span class="idx">08</span>FAQ</div>
   <h2>Quick answers.</h2>
   <div class="faqs">
     <details open><summary>Do I have to build an "agent"?</summary>
@@ -375,9 +408,22 @@
 </div></section>
 
 <footer><div class="wrap">
-  <div class="big">Let's <span class="em">elevate</span> — together.</div>
-  ELEVATE 2026 · built by the organizing team ·
-  <a href="https://github.com/99x-Projects/elevate-2026">github.com/99x-Projects/elevate-2026</a>
+  <div class="fgrid">
+    <div class="lead-f">Let's <span class="em">elevate</span> — together.</div>
+    <div class="fcol"><h5>The event</h5>
+      <a href="#what">What it is</a>
+      <a href="#how">How it works</a>
+      <a href="#event">Timeline</a>
+      <a href="#faq">FAQ</a></div>
+    <div class="fcol"><h5>Take part</h5>
+      <a href="https://forms.cloud.microsoft/pages/responsepage.aspx?id=K7gH1v9rDUCvZI56suigBJaVsYtqlo9DmHA8Anr6E8tUM0dJRFczNDA0S1ZDMjBJRjAxMlA1WTMwMS4u&route=shorturl">Registration form</a>
+      <a href="https://github.com/99x-Projects/elevate-2026/blob/main/TEAMS.md">TEAMS.md</a>
+      <a href="https://github.com/99x-Projects/elevate-2026">GitHub repo</a></div>
+  </div>
+  <div class="fbase">
+    <span>ELEVATE 2026 · 99x, 349 Colombo Main Rd, Colombo 00300</span>
+    <span>Built by the organizing team</span>
+  </div>
 </div></footer>
 
 <script>
