@@ -140,10 +140,12 @@ Keep your section's heading and position in the list as-is — just fill in the 
 
 ## 16. CarCare
 
-- **Team Name:** _TBD_
-- **Team Lead:** _TBD_
+- **Team Name:** Scrape Crew
+- **Team Lead:** Shalitha Hewaratnage
 - **Participants:**
-  - _TBD_
+  - Shalitha Hewaratnage
+  - Lahiru Subasinghe
+  - Kalhan Hettipathirana
 
 ## 17. Compello Process
 
