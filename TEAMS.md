@@ -183,10 +183,12 @@ Keep your section's heading and position in the list as-is — just fill in the 
 
 ## 21. NRC
 
-- **Team Name:** _TBD_
-- **Team Lead:** _TBD_
+- **Team Name:** DataFalcons
+- **Team Lead:** Kasuntharu Rathnayake
 - **Participants:**
-  - _TBD_
+  - Yasanka Jayawardane
+  - Kasuntharu Rathnayake
+  - Chamindu Appuhamy
 
 ## 22. Parkly
 
