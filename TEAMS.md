@@ -288,3 +288,11 @@ Keep your section's heading and position in the list as-is — just fill in the 
   - Isira Wattage
   - Pradeesha Hettiarachchi
   - Nipuna Navodya
+ 
+## 33. Gture - ZEM
+
+- **Team Name:** Data Warriors
+- **Team Lead:** Sampath Sandaruwan
+- **Participants:**
+  - Sampath Sandaruwan
+  - Mohamed Fahim
