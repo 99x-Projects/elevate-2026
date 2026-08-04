@@ -153,10 +153,13 @@ Keep your section's heading and position in the list as-is — just fill in the 
 
 ## 17. Compello Process
 
-- **Team Name:** _TBD_
-- **Team Lead:** _TBD_
+- **Team Name:** Compello Process
+- **Team Lead:** Shiromi Basil
 - **Participants:**
-  - _TBD_
+  - Hashen De Silva
+  - Kasun Tharaka
+  - Piyumi Ranasinghe
+  - Shiromi Basil
 
 ## 18. Envo · Sebastian AS
 
