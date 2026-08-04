@@ -169,10 +169,13 @@ Keep your section's heading and position in the list as-is — just fill in the 
 
 ## 19. Friskus · SosialT · No Isolation · Gov Digitalization
 
-- **Team Name:** _TBD_
-- **Team Lead:** _TBD_
+- **Team Name:** Frisolation
+- **Team Lead:** Ruchira Jayasuriya
 - **Participants:**
-  - _TBD_
+  - Dhammika Marasinghe
+  - Madusha Mihiran
+  - Malith Wijesekara
+  - Damitha Sirimevan
 
 ## 20. Hatteland
 
