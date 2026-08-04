@@ -286,9 +286,9 @@ Keep your section's heading and position in the list as-is — just fill in the 
   - Pradeesha Hettiarachchi
   - Nipuna Navodya
  
-## 33. Data Warriors
+## 33. Gture - ZEM
 
-- **Team Name:** Gture - ZEM
+- **Team Name:** Data Warriors
 - **Team Lead:** Sampath Sandaruwan
 - **Participants:**
   - Sampath Sandaruwan
