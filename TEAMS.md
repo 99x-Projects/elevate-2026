@@ -168,11 +168,12 @@ Keep your section's heading and position in the list as-is — just fill in the 
 ## 22. Parkly
 
 - **Team Name:** Parkly
-- **Team Lead:** Prahveen
+- **Team Lead:** Lahiru N
 - **Participants:**
   - Lahiru N
   - Madhawa
   - Skenos
+  - Jude
 
 ## 23. Plaato · Grunt · Norwegian SubSea · Kahoot · My1min
 
