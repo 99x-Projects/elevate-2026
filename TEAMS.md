@@ -62,31 +62,43 @@ Keep your section's heading and position in the list as-is — just fill in the 
 
 ## 7. Amili ARM · Pay · AutoCollect
 
-- **Team Name:** _TBD_
-- **Team Lead:** _TBD_
+- **Team Name:** ARM
+- **Team Lead:** Omer M
 - **Participants:**
-  - _TBD_
+  - Eranda K
+  - Eranga U
+  - Asinthe B
+  - Omer M
 
 ## 8. Amili EDI
 
-- **Team Name:** _TBD_
-- **Team Lead:** _TBD_
-- **Participants:**
-  - _TBD_
+- **Team Name:** EDIssey
+- **Team Lead:** Purindu W
+- **Participants:**  
+  - Kushan H
+  - Navodh F
+  - Bhanuka A
+  - Purindu W
 
 ## 9. Amili MyPage · Customer Portal
 
-- **Team Name:** _TBD_
-- **Team Lead:** _TBD_
+- **Team Name:** Phoelantis
+- **Team Lead:** Pasindu E
 - **Participants:**
-  - _TBD_
+  - Pasindu E
+  - Dihas L
+  - Kumuthu P
+  - Risni D
 
 ## 10. Amili Send
 
-- **Team Name:** _TBD_
-- **Team Lead:** _TBD_
+- **Team Name:** Send
+- **Team Lead:** Janith P
 - **Participants:**
-  - _TBD_
+  - Chathulanka G
+  - Nimna P
+  - Prasanna L
+  - Janith P
 
 ## 11. Arktika · Amili Data Platform · Gture-Ditio
 
@@ -104,17 +116,24 @@ Keep your section's heading and position in the list as-is — just fill in the 
 
 ## 13. Boligmappa-Tilde · AreaSim
 
-- **Team Name:** _TBD_
-- **Team Lead:** _TBD_
+- **Team Name:** BoligSim
+- **Team Lead:** Kushan Rathnayaka
 - **Participants:**
-  - _TBD_
+  - Sudath Thenuwara
+  - Avishka Gamage
+  - Kushan Rathnayaka
+  - Thiruni Jayasiriwardena
+  - Nelum Weerakoon
 
 ## 14. BUS
 
-- **Team Name:** _TBD_
-- **Team Lead:** _TBD_
+- **Team Name:** BUS Express
+- **Team Lead:** Gihan Wijesinghe
 - **Participants:**
-  - _TBD_
+  - Gihan Wijesinghe
+  - Chathusara Tennakoon
+  - Ishrath Raji
+  - Shenal Pelpola
 
 ## 15. Cantor · Kimaa
 
@@ -125,31 +144,41 @@ Keep your section's heading and position in the list as-is — just fill in the 
 
 ## 16. CarCare
 
-- **Team Name:** _TBD_
-- **Team Lead:** _TBD_
+- **Team Name:** Scrape Crew
+- **Team Lead:** Shalitha Hewaratnage
 - **Participants:**
-  - _TBD_
+  - Shalitha Hewaratnage
+  - Lahiru Subasinghe
+  - Kalhan Hettipathirana
 
 ## 17. Compello Process
 
-- **Team Name:** _TBD_
-- **Team Lead:** _TBD_
+- **Team Name:** Compello Process
+- **Team Lead:** Shiromi Basil
 - **Participants:**
-  - _TBD_
+  - Hashen De Silva
+  - Kasun Tharaka
+  - Piyumi Ranasinghe
+  - Shiromi Basil
 
 ## 18. Envo · Sebastian AS
 
-- **Team Name:** _TBD_
-- **Team Lead:** _TBD_
+- **Team Name:** ENVO
+- **Team Lead:** Kasun Gunathilaka
 - **Participants:**
-  - _TBD_
+  - Kasun De Silva
+  - Sapumal Thepulangoda
+  - Suneth Wijayasiri
 
 ## 19. Friskus · SosialT · No Isolation · Gov Digitalization
 
-- **Team Name:** _TBD_
-- **Team Lead:** _TBD_
+- **Team Name:** Frisolation
+- **Team Lead:** Ruchira Jayasuriya
 - **Participants:**
-  - _TBD_
+  - Dhammika Marasinghe
+  - Madusha Mihiran
+  - Malith Wijesekara
+  - Damitha Sirimevan
 
 ## 20. Hatteland
 
@@ -160,10 +189,12 @@ Keep your section's heading and position in the list as-is — just fill in the 
 
 ## 21. NRC
 
-- **Team Name:** _TBD_
-- **Team Lead:** _TBD_
+- **Team Name:** DataFalcons
+- **Team Lead:** Kasuntharu Rathnayake
 - **Participants:**
-  - _TBD_
+  - Yasanka Jayawardane
+  - Kasuntharu Rathnayake
+  - Chamindu Appuhamy
 
 ## 22. Parkly
 
@@ -175,7 +206,7 @@ Keep your section's heading and position in the list as-is — just fill in the 
   - Skenos
   - Jude
 
-## 23. Plaato · Grunt · Norwegian SubSea · Kahoot · My1min
+## 23. Plaato · Grunt · Norwegian SubSea · Kahoot
 
 - **Team Name:** _TBD_
 - **Team Lead:** _TBD_
@@ -184,17 +215,22 @@ Keep your section's heading and position in the list as-is — just fill in the 
 
 ## 24. Raintree Inc.
 
-- **Team Name:** _TBD_
-- **Team Lead:** _TBD_
+- **Team Name:** Rainees
+- **Team Lead:** Hasitha Weerakoon
 - **Participants:**
-  - _TBD_
+  - Hasitha
+  - Sanjeewa
+  - Abhiman 
+  - Anura
 
 ## 25. Solwr OMS
 
-- **Team Name:** _TBD_
-- **Team Lead:** _TBD_
+- **Team Name:** Solwr
+- **Team Lead:** Yomal De Silva
 - **Participants:**
-  - _TBD_
+  - Yomal De Silva
+  - Hasith Ranasinghe
+  - Vihanga Liyanage
 
 ## 26. SuperOffice AI
 
@@ -226,10 +262,12 @@ Keep your section's heading and position in the list as-is — just fill in the 
 
 ## 30. UpNorway
 
-- **Team Name:** _TBD_
-- **Team Lead:** _TBD_
+- **Team Name:** NorVengers
+- **Team Lead:** Vinusha
 - **Participants:**
-  - _TBD_
+  - Vinusha
+  - Kirulu
+  - Sachintha
 
 ## 31. VardaCare
 
@@ -238,10 +276,27 @@ Keep your section's heading and position in the list as-is — just fill in the 
 - **Participants:**
   - Zameer
 
- ## 32. Govtech
+## 32. Govtech
 
 - **Team Name:** Govtech
 - **Team Lead:** Chinthaka D
 - **Participants:**
   - Chinthaka D
 
+## 33. My1Min
+
+- **Team Name:** My1Min
+- **Team Lead:** Niranga De Silva
+- **Participants:**
+  - Niranga De Silva
+  - Isira Wattage
+  - Pradeesha Hettiarachchi
+  - Nipuna Navodya
+ 
+## 33. Gture - ZEM
+
+- **Team Name:** Data Warriors
+- **Team Lead:** Sampath Sandaruwan
+- **Participants:**
+  - Sampath Sandaruwan
+  - Mohamed Fahim
