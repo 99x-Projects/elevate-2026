@@ -172,10 +172,14 @@ Keep your section's heading and position in the list as-is — just fill in the 
 
 ## 19. Friskus · SosialT · No Isolation · Gov Digitalization
 
-- **Team Name:** _TBD_
-- **Team Lead:** _TBD_
+- **Team Name:** Frisolation
+- **Team Lead:** Ruchira Jayasuriya
 - **Participants:**
-  - _TBD_
+  - Dhammika Marasinghe
+  - Madusha Mihiran
+  - Malith Wijesekara
+  - Damitha Sirimevan
+  - Kasuni Kuruppuarachchi 
 
 ## 20. Hatteland
 
@@ -196,11 +200,12 @@ Keep your section's heading and position in the list as-is — just fill in the 
 ## 22. Parkly
 
 - **Team Name:** Parkly
-- **Team Lead:** Prahveen
+- **Team Lead:** Lahiru N
 - **Participants:**
   - Lahiru N
   - Madhawa
   - Skenos
+  - Jude
 
 ## 23. Plaato · Grunt · Norwegian SubSea · Kahoot
 
