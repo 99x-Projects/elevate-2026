@@ -20,11 +20,6 @@ Keep your section's heading and position in the list as-is — just fill in the 
 
 ## 1. Adra
 
-- **Team Name:** _TBD_
-- **Team Lead:** _TBD_
-- **Participants:**
-  - _TBD_
-
 - **Team Name:** ADRA - AI-Driven Resolution Assistant
 - **Team Lead:** Vihidun Pathiranage
 - **Participants:**
