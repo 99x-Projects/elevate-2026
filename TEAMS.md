@@ -153,13 +153,13 @@ Keep your section's heading and position in the list as-is — just fill in the 
 
 ## 17. Compello Process
 
-- **Team Name:** Compello Process
-- **Team Lead:** Shiromi Basil
+- **Team Name:** Process Pulse
+- **Team Lead:** Piyumi Ranasinghe
 - **Participants:**
-  - Hashen De Silva
-  - Kasun Tharaka
   - Piyumi Ranasinghe
-  - Shiromi Basil
+  - Kasun Tharaka
+  - Yasith Fernando
+  - Ravindu Wickramage
 
 ## 18. Envo · Sebastian AS
 
@@ -288,3 +288,14 @@ Keep your section's heading and position in the list as-is — just fill in the 
   - Isira Wattage
   - Pradeesha Hettiarachchi
   - Nipuna Navodya
+
+## 34. Compello Process
+
+- **Team Name:** Product Lens
+- **Team Lead:** Shiromi Basil
+- **Participants:**
+  - Shiromi Basil
+  - Hashen De Silva
+  - Kasun Jayasinghe
+  - Imesh Peiris
+  
