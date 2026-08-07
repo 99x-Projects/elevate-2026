@@ -18,12 +18,15 @@ Keep your section's heading and position in the list as-is — just fill in the 
 
 ---
 
-## 1. Adra Balancer
+## 1. Adra
 
-- **Team Name:** _TBD_
-- **Team Lead:** _TBD_
+- **Team Name:** ADRA - AI-Driven Resolution Assistant
+- **Team Lead:** Vihidun Pathiranage
 - **Participants:**
-  - _TBD_
+  - Sameera Palansooriya
+  - Sandun Abeywickrama
+  - Savindu Bandara
+  - Supun Thiyambarawatta
 
 ## 2. Adra Journal Entry
 
