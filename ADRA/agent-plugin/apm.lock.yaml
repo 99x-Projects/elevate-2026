@@ -1,0 +1,39 @@
+lockfile_version: '1'
+generated_at: '2026-08-08T10:15:32.770588+00:00'
+dependencies: []
+deployments:
+- kind: project-relative
+  target: claude
+  value: .claude/commands/grooming.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:46fc37584f5779f73fafb031f17457938f7b9d864a6e61a04d3e3725c1fa1e90
+- kind: project-relative
+  target: copilot
+  value: .github/prompts/grooming.prompt.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:e7523436a1639e3f37c12942e30d975cae4da844583fdd1ed0d11a530fab47df
+- kind: project-relative
+  target: cursor
+  value: .cursor/commands/grooming.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:46fc37584f5779f73fafb031f17457938f7b9d864a6e61a04d3e3725c1fa1e90
+local_deployed_files:
+- .claude/commands/grooming.md
+- .cursor/commands/grooming.md
+- .github/prompts/grooming.prompt.md
+local_deployed_file_hashes:
+  .claude/commands/grooming.md: sha256:46fc37584f5779f73fafb031f17457938f7b9d864a6e61a04d3e3725c1fa1e90
+  .cursor/commands/grooming.md: sha256:46fc37584f5779f73fafb031f17457938f7b9d864a6e61a04d3e3725c1fa1e90
+  .github/prompts/grooming.prompt.md: sha256:e7523436a1639e3f37c12942e30d975cae4da844583fdd1ed0d11a530fab47df
